@@ -1,0 +1,26 @@
+   public static void main(String[] args) {
+        FullBinaryTree fbt  = new FullBinaryTree();
+        fbt.allPossibleFBT(5);
+        System.out.println(fbt.result.size());
+
+        for(TreeNode root: fbt.result) {
+            System.out.print(root.val +  ",");
+            fbt.printResult(root);
+            System.out.println("");
+        }
+
+    }
+
+    public void printResult( TreeNode root) {
+        if(root == null) return;
+
+        TreeNode left = root.left;
+        TreeNode right = root.right;
+        System.out.print("" + (left != null ? left.val : "null"));
+        System.out.print(",");
+        System.out.print("" + (right != null ? right.val : "null"));
+        printResult(left);
+        printResult(right);
+
+
+    }

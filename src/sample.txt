@@ -1,0 +1,33 @@
+  String window = s;
+        Map<Character,  Queue<Integer>> indexMap = new HashMap();
+        Queue<Character> indexQueue = new LinkedList();
+
+        for(int i= 0; i < s.length(); i++) {
+
+            Character charAtI = new Character(s.charAt(i));
+
+            if(  t.indexOf(charAtI) != -1 )  {
+                Queue<Integer> listToAdd = indexMap.getOrDefault(charAtI, new LinkedList<>());
+                listToAdd.add(i);
+                indexMap.put( charAtI, listToAdd );
+                indexQueue.add(charAtI);
+            }
+
+            while (indexMap.size() == t.length()) {
+                int start = indexMap.get(indexQueue.peek()).peek();
+                window = window.length() < i - start ? window : s.substring(start, i+1);
+                Character charToRemove = indexQueue.peek();
+                if(indexMap.get(charToRemove).size() == 1) {
+                    indexMap.remove(charToRemove);
+                }
+                else {
+                   indexMap.get(charToRemove).poll();
+                }
+                indexQueue.remove();
+
+                //start = indexMap.get(indexQueue.peek());
+            }
+
+        }
+
+        return  window;
