@@ -57,7 +57,24 @@ for word i, delete one character at a time and get the predecessor length from a
 Complexity:  Why is bottom up  DP approach Time complexity:  O (N (logN + L^2)). instead of O (N (logN + L)).
 Where did the extra L come from ?  It says L is for creating each predecessor.
 The remove charAt(i) on stringBuilder incurrs a cost of L I guess.
------------------------------
+------------------------------------------------------------
+Knapsack Problem
+W = (1, 2, 3) V = (6, 10 , 12).  Capacity = 5
+
+        1       2       3       4         5(c from 0 to N)
+1       6       6       6       6         6
+
+           (6, 10)  (6,6+10)  (6,6+10)  (6,6+10)
+2       6     10       16      16        16
+
+           (10, )
+3       6    10   (16,16+0) (16,6+12)   (16,10+12)
+(i from 0 to 3)       16       18        22
+
+
+
+dp[i][c] =   max(dp[i-1][c], dp[i-1][c - W[i]]  + V[i])
+--------------------------------------------------
 
 
 
