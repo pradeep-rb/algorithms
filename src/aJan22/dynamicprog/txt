@@ -75,7 +75,19 @@ W = (1, 2, 3) V = (6, 10 , 12).  Capacity = 5
 
 dp[i][c] =   max(dp[i-1][c], dp[i-1][c - W[i]]  + V[i])
 --------------------------------------------------
+983.  Min cost of tickets   1 day or 7 day or 30 passes with costs[i].  Minimize $$$
+Input: days = [1,4,6,7,8,20], costs = [2,7,15]
+Output: 11
+Explanation: For example, here is one way to buy passes that lets you travel your travel plan:
+On day 1, you bought a 1-day pass for costs[0] = $2, which covered day 1.
+On day 3, you bought a 7-day pass for costs[1] = $7, which covered days 3, 4, ..., 9.
+On day 20, you bought a 1-day pass for costs[0] = $2, which covered day 20.
+In total, you spent $11 and covered all the days of your travel.
 
+solution:
+if not traveling on day i then dp[i] = dp[i-1]
+if traveling on day i then dp[i] =  min ( 2+ dp[i-2],  7+ dp[i-7], 15 + dp[i-30])
+--------------------------------------------------------------
 
 
 
