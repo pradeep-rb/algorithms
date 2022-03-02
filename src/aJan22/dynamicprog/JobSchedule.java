@@ -53,14 +53,9 @@ public class JobSchedule {
             for (int j = i; j < n; j++) {
                 int hardest =  jD[j];
                 dp[j][i] =  Integer.MAX_VALUE;
-                System.out.println("------");
-//                for (int k = i; k <= j ; k++) {
-//                    System.out.println("k : " + k);
-//                    hardest = Math.max(hardest, jD[k]);
-//                    min = Math.min( min, dp[k-1][i-1]);
-//                }
+
                 for (int k = j; k >= i ; k--) {
-                    //System.out.println("k : " + k);
+
                     hardest = Math.max(hardest, jD[k]);
                     dp[j][i] = Math.min(  dp[j][i], dp[k-1][i-1] + hardest);
                 }

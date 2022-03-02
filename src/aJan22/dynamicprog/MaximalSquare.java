@@ -6,7 +6,7 @@ public class MaximalSquare {
 
 
     //my own approach
-    public int maximalSquare(char[][] matrix) {
+    public int maximalSquare1(char[][] matrix) {
 
         int r = matrix.length;
         int c = matrix[0].length;
@@ -42,7 +42,7 @@ public class MaximalSquare {
 
 
     //a better approach to eliminate the inner while loop
-    public int maximalSquare2(char[][] matrix) {
+    public int maximalSquare(char[][] matrix) {
         int r = matrix.length,c = matrix[0].length;
         int dp[][] = new int[r+1][c+1];
         int max = 0;
@@ -65,12 +65,12 @@ public class MaximalSquare {
 //        System.out.println(ms.maximalSquare(new char[][]{{ '0' } } ));
 //        System.out.println(ms.maximalSquare(new char[][]{{ '1', '1' }, { '1', '1' }} ));
 //        System.out.println(ms.maximalSquare(new char[][]{{ '0','0','0','1'}, {'1','1','0','1'}, {'1','1','1','1'}, {'0','1','1','1' }, {'0','1','1','1' }} ));
-        System.out.println(ms.maximalSquare2(new char[][]{{ '1','0','1','0','0'}, {'1','0','1','1','1'}, {'1','1','1','1','1'}, {'1','0','0','1','0'  }} ));
-        System.out.println(ms.maximalSquare2(new char[][]{{ '1','0','1','0','0'}, {'1','0','1','1','1'}, {'1','1','1','1','1'}, {'1','0','1','1','1'  }} ));
-        System.out.println(ms.maximalSquare2(new char[][]{{ '0', '1' }, { '1', '0' }} ));
-        System.out.println(ms.maximalSquare2(new char[][]{{ '0' } } ));
-        System.out.println(ms.maximalSquare2(new char[][]{{ '1', '1' }, { '1', '1' }} ));
-        System.out.println(ms.maximalSquare2(new char[][]{{ '0','0','0','1'}, {'1','1','0','1'}, {'1','1','1','1'}, {'0','1','1','1' }, {'0','1','1','1' }} ));
+        System.out.println(ms.maximalSquare(new char[][]{{ '1','0','1','0','0'}, {'1','0','1','1','1'}, {'1','1','1','1','1'}, {'1','0','0','1','0'  }} ));
+        System.out.println(ms.maximalSquare(new char[][]{{ '1','0','1','0','0'}, {'1','0','1','1','1'}, {'1','1','1','1','1'}, {'1','0','1','1','1'  }} ));
+        System.out.println(ms.maximalSquare(new char[][]{{ '0', '1' }, { '1', '0' }} ));
+        System.out.println(ms.maximalSquare(new char[][]{{ '0' } } ));
+        System.out.println(ms.maximalSquare(new char[][]{{ '1', '1' }, { '1', '1' }} ));
+        System.out.println(ms.maximalSquare(new char[][]{{ '0','0','0','1'}, {'1','1','0','1'}, {'1','1','1','1'}, {'0','1','1','1' }, {'0','1','1','1' }} ));
 
 
     }

@@ -88,9 +88,50 @@ solution:
 if not traveling on day i then dp[i] = dp[i-1]
 if traveling on day i then dp[i] =  min ( 2+ dp[i-2],  7+ dp[i-7], 15 + dp[i-30])
 --------------------------------------------------------------
+174 Dungeon game: -ve: health, +ve : orbs. Go from 0,0 to 2,2
 
 
+-2       -3       3                 -2(7)     -3(5)   3(*)
+                                    (8)      (14)    (2)
+
+                                     (16)     (15)
+-5      -10       1                 -5       -10     1(*)
+                 (5)              (6)       (11)     (5)
 
 
+10       30(1)   -5                10(1)    30(1)    -5 (6)
+                                  (*)       (*)       (6)
 
+ dp[r-1][c-1] = dungeon[r-1][c-1] > 0 ? 1 : 1 - dungeon[r-1][c-1];
+
+  dp[i][j] = Math.min(dungeon[i][j] >= dp[i + 1][j] ? 1 : dp[i+1][j] ==  Integer.MAX_VALUE ? Integer.MAX_VALUE : dp[i + 1][j] - dungeon[i][j],
+                            dungeon[i][j] >= dp[i][j + 1] ? 1 : dp[i][j + 1] ==  Integer.MAX_VALUE ? Integer.MAX_VALUE : dp[i][j + 1] -  dungeon[i][j]);
+
+
+or
+
+// in the cell where the princess is, if I have an orb, all it takes is a health of 1 right before I get there
+// else I need 1 more than how much my health will be depleted by (-ve health )
+dp[r-1][c-1] = dungeon[r-1][c-1] > 0 ? 1 : 1 - dungeon[r-1][c-1];
+// How much health do I need, considering the right or the bottom cell (places I gotta go)
+int need =  Math.min(dp[i + 1][j],  dp[i][j + 1]  )  - dungeon[i][j];
+//but  if my needs are more than satisfied by an orb in the current cell, then all I need is a health of 1
+//  else I need what  I need
+dp[i][j] = dungeon[i][j] >= dp[i + 1][j]  || dungeon[i][j] >= dp[i ][j+1]   ? 1 : need;
+--------------------------------------------------------
+312 Bursting Balloons: probably the hardest DP problem
+The number of states in the solutions seems to evolve as follows 1) all possible permutations N!. 2) all possible subsets in a set 2^n.
+ 3)all possible subarrays in an array N* ((N+1)/2) ~ N^2. So the question we need to ask ourselves is how can I reduce the number of states?
+By memoization obviously. But if memoization still doesn't get you a linear run time complexity, then perhaps there is a better way to memoize.
+The important takeaway from the problems are not the solutions themselves but,
+learning to think about the number of states involved in each solution and trying to see if there is a better way to reduce the number of states.
+Knowing that there are N^2 subarrays in an array (and therefore N^2 states) will now force me to want to divide any array that I see / look for a potential divide  and conquer solution.
+
+
+The number of states in the solutions seems to evolve as follows
+1) all possible permutations N!. 2) all possible subsets in a set 2^n. 3)all possible sub-arrays in an array N* ((N+1)/2) ~ N^2.
+So the question we need to ask ourselves is how can I reduce the number of states?
+By memoization obviously. But if memoization still doesn't get you a linear run time complexity, then perhaps there is a better way to memoize.
+
+----------------------------------------------
 
