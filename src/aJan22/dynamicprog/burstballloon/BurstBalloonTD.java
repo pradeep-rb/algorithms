@@ -1,12 +1,9 @@
 package aJan22.dynamicprog.burstballloon;
 
-import java.util.Arrays;
-import java.util.stream.Collectors;
-
 public class BurstBalloonTD {
 
 
-    private int dp(int[] nums, int left, int right, int[][] memo) {
+    private int maxCoins(int[] nums, int left, int right, int[][] memo) {
 
         if (right - left < 0) return 0;
         if(memo[left][right] > 0 ) return memo[left][right];
@@ -16,7 +13,7 @@ public class BurstBalloonTD {
         for (int i = left; i <= right ; i++) {
 
             int product =  nums[left-1] * nums[i] * nums[right+1];
-            int remaining = dp(nums,  left,i -1, memo)    +   dp(nums, i+1, right, memo);
+            int remaining = maxCoins(nums,  left,i -1, memo)    +   maxCoins(nums, i+1, right, memo);
             result = Math.max(remaining + product, result);
             memo[left][right] = result;
         }
@@ -32,7 +29,7 @@ public class BurstBalloonTD {
       newnums[0] = 1; newnums[n+1] =  1;
       int[][] memo = new int[n+1][n+1];
 
-      return  dp(newnums, 1,  n, memo);
+      return  maxCoins(newnums, 1,  n, memo);
 
     }
 
