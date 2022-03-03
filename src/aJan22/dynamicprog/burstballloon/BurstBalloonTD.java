@@ -1,5 +1,8 @@
 package aJan22.dynamicprog.burstballloon;
 
+/*
+    312  top down approach + divide and conquer
+ */
 public class BurstBalloonTD {
 
 
@@ -15,7 +18,6 @@ public class BurstBalloonTD {
             int product =  nums[left-1] * nums[i] * nums[right+1];
             int remaining = maxCoins(nums,  left,i -1, memo)    +   maxCoins(nums, i+1, right, memo);
             result = Math.max(remaining + product, result);
-            memo[left][right] = result;
         }
 
         return result;
