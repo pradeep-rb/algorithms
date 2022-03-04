@@ -1,0 +1,7 @@
+*When using custom DS like TreeNode or TrieNode, during the construction of the tree/trie
+ check to see if augmenting with things like no. of right or left childern, or index position etc. can help later with the solution.
+
+* populating a map with lists for value :   someMap.computeIfAbsent(key, l -> new ArrayList<>()).add(value );
+* max priority queue with comparator lamda :  Queue<Integer[]> queue = new PriorityQueue<>( (e1, e2) -> e2[2] - e1[1]); poll gives the max vallue
+* min priority queue with comparator lamda :  Queue<Integer[]> queue = new PriorityQueue<>( (e1, e2) -> e1[2] - e2[1]); poll gives the min value
+* fix for a mistake in div conq:  mid = (start + end) / 2
