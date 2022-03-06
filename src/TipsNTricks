@@ -1,7 +1,33 @@
 *When using custom DS like TreeNode or TrieNode, during the construction of the tree/trie
  check to see if augmenting with things like no. of right or left childern, or index position etc. can help later with the solution.
 
+* fix for a mistake in div conq:  mid = (start + end) / 2
+
+
+Streams/Lamda
+
 * populating a map with lists for value :   someMap.computeIfAbsent(key, l -> new ArrayList<>()).add(value );
 * max priority queue with comparator lamda :  Queue<Integer[]> queue = new PriorityQueue<>( (e1, e2) -> e2[2] - e1[1]); poll gives the max vallue
 * min priority queue with comparator lamda :  Queue<Integer[]> queue = new PriorityQueue<>( (e1, e2) -> e1[2] - e2[1]); poll gives the min value
-* fix for a mistake in div conq:  mid = (start + end) / 2
+* finding max in an integer array:  dist.values().stream().mapToInt(i -> i).max().getAsInt();
+* PQ: comparator example:         Queue<MazeState> graph = new PriorityQueue<>(Comparator.comparing(MazeState::getDistance).thenComparing(MazeState::getDirection) );
+* Comparatory :Comparator.comparing() - natural order , thenComparing,  reversed() - reversed natural order
+
+
+Graphs
+* dfs uses stack. BFS - Queue,  Dijkstra uses P Queue.
+* Among dfs, bfs and dijkstra, dfs is probably the easiest to code, since the recursive call implicity keeps track of the state
+   as opposed to using BFS, where the state has to be stored in a queue *
+
+Arrays
+To copy one array to another: System.ArrayCopy (src, srcPos, dest, destPos, Length)
+To initialize an array. Arrays.fill(arr, val)
+check array equivalence Arrays.equals
+to print arrays: Arrays.toString
+
+Enums:
+use constructor, values.
+name() gives the enum literal
+Objects.equals compares enum with null check
+Enumerate through enum ({Enum}.values):  for (Direction dir: Arrays.asList(Direction.values()))
+
