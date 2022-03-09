@@ -11,6 +11,14 @@ DFS: stack, BFS: queue, Dijkstra: Min Priority Queue
 Algos
 DFS, BFS, Dijkstra,  Topological sort
 
+Topological Sort:
+2 algorithms :  Kahn's and DFS based
+* Dfs : Recursively explore every vertex in graph. After exploring all neighbors of the vertex, add the vertex to the front of the list
+https://www.interviewcake.com/concept/java/topological-sort
+* Kahns: Put all 0 degree vertex in a Q. Remove vertex, put it end of list, for every neighbor v', decrease its in degree by 1.
+if v' in-degree is 0, add it to the Q.
+https://www.baeldung.com/cs/dag-topological-sort
+
 Dijkstra Algorithms:
 https://leetcode.com/list/53js48ke/
 Hard: 882,499
@@ -40,5 +48,8 @@ We will send a signal from a given node k. Return the time it takes for all the 
 If it is impossible for all the n nodes to receive the signal, return -1.
 
 Solution:  Maintain a map of distances from the src: (also serves the purpose showing if a node has been visited)
-
+------------------------------------------------------------------------------------------------------------------------
+210  Course Schedule 2. Topological sort by DFS
+The tricky part is cycle detection.  DFS alone requires only two states : not visited and visited
+Cycle detection needs a 3rd state : visiting.
 
