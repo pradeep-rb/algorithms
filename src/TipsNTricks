@@ -7,8 +7,8 @@
 Streams/Lamda
 
 * populating a map with lists for value :   someMap.computeIfAbsent(key, l -> new ArrayList<>()).add(value );
-* max priority queue with comparator lamda :  Queue<Integer[]> queue = new PriorityQueue<>( (e1, e2) -> e2[2] - e1[1]); poll gives the max vallue
-* min priority queue with comparator lamda :  Queue<Integer[]> queue = new PriorityQueue<>( (e1, e2) -> e1[2] - e2[1]); poll gives the min value
+* max priority queue with comparator lamda :  Queue<Integer> queue = new PriorityQueue<>( (a, b) -> b - a); poll gives the max vallue
+* min priority queue with comparator lamda :  Queue<Integer> queue = new PriorityQueue<>( (a, b) -> a - b); poll gives the min value
 * finding max in an integer array:  dist.values().stream().mapToInt(i -> i).max().getAsInt();
 * toArray: result.stream().mapToInt(i -> i).toArray()
 * PQ: comparator example:         Queue<MazeState> graph = new PriorityQueue<>(Comparator.comparing(MazeState::getDistance).thenComparing(MazeState::getDirection) );
@@ -27,6 +27,7 @@ To copy one array to another: System.ArrayCopy (src, srcPos, dest, destPos, Leng
 To initialize an array. Arrays.fill(arr, val)
 check array equivalence Arrays.equals
 to print arrays: Arrays.toString
+sort an array:   Arrays.sort(arr, (a, b) -> a[1] - b[1]); args:  T[] generic array and comparator.
 
 Enums: (refer maze2, maze3)
 use constructor, values.
@@ -34,3 +35,5 @@ name() gives the enum literal
 Objects.equals compares enum with null check
 Enumerate through enum ({Enum}.values):  for (Direction dir: Arrays.asList(Direction.values()))
 
+Big(0)
+* backtracking algos are usually O(n!)  - see burst balloons. Memoization can reduce the number of states.

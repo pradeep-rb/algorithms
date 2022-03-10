@@ -1,7 +1,5 @@
 package aJan22.Trie;
 
-import aJan22.ds.TreeNode;
-
 import java.util.*;
 
 public class TrieAutoComplete {

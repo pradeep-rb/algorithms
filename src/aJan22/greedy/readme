@@ -1,0 +1,8 @@
+problems to do:
+   Interval problems :   m435, m56
+
+630 Course Schedule 3.
+-----------------------
+This is a back tracking problem but has a greedy element to it. Sorting the courses by their lastDay, it can be inferred
+that it is profitable to pick  courses with smaller end days  in a greedy manner prior to courses with a larger end days
+
