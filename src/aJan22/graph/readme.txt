@@ -1,3 +1,8 @@
+Problems to do:
+    269h. Alien Dictionary
+    329h. Longest Increasing Path in a Matrix
+
+
 **DFS vs BFS**<br>
 shortest path on simple graph -> bfs.   It first finds all the vertices that are one edge away from the starting point, then all the vertices that are two edges away, and so on. This is useful if you’re trying to find the shortest path from the starting vertex to a given vertex.<br>
 all possible results->bfs<br>
@@ -52,4 +57,10 @@ Solution:  Maintain a map of distances from the src: (also serves the purpose sh
 210  Course Schedule 2. Topological sort by DFS
 The tricky part is cycle detection.  DFS alone requires only two states : not visited and visited
 Cycle detection needs a 3rd state : visiting.
+------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
 

@@ -1,3 +1,19 @@
+Problems to do:
+    1000h merge stones
+     741h : cherry pick
+     Matrix Chain multiplication, LIS are their own categories
+     Merge interval problems*
+
+Leetcode DP categories
+https://leetcode.com/discuss/general-discussion/458695/dynamic-programming-patterns
+https://leetcode.com/discuss/general-discussion/1000929/solved-all-dynamic-programming-dp-problems-in-7-months
+https://leetcode.com/discuss/general-discussion/592146/Dynamic-Programming-Summary
+
+DP Blogs
+https://codeforces.com/blog/entry/67679
+https://codeforces.com/blog/entry/43256
+
+
 max sub array
 stocks
 robber3 (rob 1 and rob2)
@@ -118,7 +134,7 @@ int need =  Math.min(dp[i + 1][j],  dp[i][j + 1]  )  - dungeon[i][j];
 //but  if my needs are more than satisfied by an orb in the current cell, then all I need is a health of 1
 //  else I need what  I need
 dp[i][j] = dungeon[i][j] >= dp[i + 1][j]  || dungeon[i][j] >= dp[i ][j+1]   ? 1 : need;
---------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------
 312 Bursting Balloons: probably the hardest DP problem
 The number of states in the solutions seems to evolve as follows 1) all possible permutations N!. 2) all possible subsets in a set 2^n.
  3)all possible subarrays in an array N* ((N+1)/2) ~ N^2. So the question we need to ask ourselves is how can I reduce the number of states?
@@ -133,5 +149,11 @@ The number of states in the solutions seems to evolve as follows
 So the question we need to ask ourselves is how can I reduce the number of states?
 By memoization obviously. But if memoization still doesn't get you a linear run time complexity, then perhaps there is a better way to memoize.
 
-----------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------
+300 Longest increasing subsequence
+Arrays.fill(dp, 1)
+if(arr[j] > arr[i])  dp[i] =  Math.max( dp[i], 1+dp[j])
+return max(dp)
+------------------------------------------------------------------------------------------------------------------------------------------
+
 
