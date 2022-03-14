@@ -58,6 +58,15 @@ Solution:  Maintain a map of distances from the src: (also serves the purpose sh
 The tricky part is cycle detection.  DFS alone requires only two states : not visited and visited
 Cycle detection needs a 3rd state : visiting.
 ------------------------------------------------------------------------------------------------------------------------
+329. Longest Increasing Path in a Matrix
+Solution:  DFS + memoization
+DFS becuase, it is easier to code, use memoization.
+the implementation with DFS seems pretty straightforward.
+    However, its simple only because we are looking for an increasing sequence and hence there are no cycles.
+    We don't have to explicitly detect cycles which is usually the case in DFS.
+    If this isn't obvious at first, you might end up writing complicated code.
+------------------------------------------------------------------------------------------------------------------------
+
 
 
 

@@ -1,11 +1,12 @@
-package aJan22.graph;
+package aJan22.graph.maze;
 
-
-import aJan22.dynamicprog.MaximalSquare;
 
 import java.util.*;
 //505. The Maze II
 // learning: enum, PQ comparators
+/*
+       Dijsktra + BFS
+ */
 
 public class Maze2 {
 

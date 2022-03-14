@@ -1,9 +1,15 @@
-package aJan22.graph;
+package aJan22.graph.maze;
 
 
 import java.util.*;
 
 //499. The Maze III
+/*
+
+    dijskrta by BFS
+    //        Queue<MazeState> graph = new PriorityQueue<>(Comparator.comparing(MazeState::getDistance).thenComparing(MazeState::getPath) );
+
+ */
 public class Maze3 {
 
     public enum Direction {
