@@ -6,6 +6,7 @@ import java.util.*;
 // learning: enum, PQ comparators
 /*
        Dijsktra + BFS
+
  */
 
 public class Maze2 {

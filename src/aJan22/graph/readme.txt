@@ -1,6 +1,6 @@
 Problems to do:
     269h. Alien Dictionary
-    329h. Longest Increasing Path in a Matrix
+    505. The Maze II  -> redo using dfs/bfs with dijkstra
 
 
 **DFS vs BFS**<br>
