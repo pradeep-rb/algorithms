@@ -12,7 +12,7 @@ Streams/Lamda
 * finding max in an integer array:  dist.values().stream().mapToInt(i -> i).max().getAsInt();
 * toArray: result.stream().mapToInt(i -> i).toArray()
 * PQ: comparator example:         Queue<MazeState> graph = new PriorityQueue<>(Comparator.comparing(MazeState::getDistance).thenComparing(MazeState::getDirection) );
-* Comparatory :Comparator.comparing() - natural order , thenComparing,  reversed() - reversed natural order
+* Comparator :Comparator.comparing() - natural order , thenComparing,  reversed() - reversed natural order
 
 
 Graphs
@@ -29,6 +29,11 @@ check array equivalence Arrays.equals
 to print arrays: Arrays.toString
 sort an array:   Arrays.sort(arr, (a, b) -> a[1] - b[1]); args:  T[] generic array and comparator.
 
+Data Structures:
+Deque<Integer> stack/queue = new LinkedList<>() / ArrayDeque;
+
+
+
 Enums: (refer maze2, maze3)
 use constructor, values.
 name() gives the enum literal
@@ -37,3 +42,13 @@ Enumerate through enum ({Enum}.values):  for (Direction dir: Arrays.asList(Direc
 
 Big(0)
 * backtracking algos are usually O(n!)  - see burst balloons. Memoization can reduce the number of states.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+topics sorted by most commonly asked:
+dynamic programming
+greedy
+trees
+binary search
+graphs
+div and conq
+back track

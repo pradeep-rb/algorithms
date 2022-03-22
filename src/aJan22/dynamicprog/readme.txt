@@ -1,8 +1,9 @@
-Problems to do:
+Todo:
     1000h merge stones
      741h : cherry pick
      Matrix Chain multiplication, LIS are their own categories
      Merge interval problems*
+
 
 Leetcode DP categories
 https://leetcode.com/discuss/general-discussion/458695/dynamic-programming-patterns
@@ -150,10 +151,11 @@ So the question we need to ask ourselves is how can I reduce the number of state
 By memoization obviously. But if memoization still doesn't get you a linear run time complexity, then perhaps there is a better way to memoize.
 
 ------------------------------------------------------------------------------------------------------------------------------------------
-300 Longest increasing subsequence
+300 Longest increasing subsequence. (check 435)
 Arrays.fill(dp, 1)
 if(arr[j] > arr[i])  dp[i] =  Math.max( dp[i], 1+dp[j])
 return max(dp)
+Same technique can be used for finding longest overlapping intervals(435)
 ------------------------------------------------------------------------------------------------------------------------------------------
 
 

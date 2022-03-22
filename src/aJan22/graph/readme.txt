@@ -1,4 +1,4 @@
-Problems to do:
+Todo:
     269h. Alien Dictionary
     505. The Maze II  -> redo using dfs/bfs with dijkstra
 
@@ -6,7 +6,7 @@ Problems to do:
 **DFS vs BFS**<br>
 shortest path on simple graph -> bfs.   It first finds all the vertices that are one edge away from the starting point, then all the vertices that are two edges away, and so on. This is useful if you’re trying to find the shortest path from the starting vertex to a given vertex.<br>
 all possible results->bfs<br>
-when using weighter graphs -> Dijstra finds the shortest distance. Dijkstra is greedy
+when using weighted graphs -> Dijstra finds the shortest distance. Dijkstra is greedy
 
 DFS: stack, BFS: queue, Dijkstra: Min Priority Queue
 ** Among dfs, bfs and dijkstra, dfs is probably the easiest to code, since the recursive call implicity keeps track of the state
