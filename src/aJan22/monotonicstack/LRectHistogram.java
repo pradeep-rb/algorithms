@@ -5,6 +5,7 @@ import java.util.LinkedList;
 
 //84
 // [find the next smallest element to the left: scan from left to right]
+// increasing monotonic stack
 public class LRectHistogram {
 
 

@@ -7,6 +7,7 @@ import java.util.Arrays;
 import java.util.Deque;
 
 //not a leetcode pblm
+// decreasing monotonic stack
 public class NextGreatestElement {
 
     public int[] nextGreaterElements(int[] nums) {

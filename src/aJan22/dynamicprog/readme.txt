@@ -1,4 +1,5 @@
 Todo:
+    42h  trapping rain water
     1000h merge stones
      741h : cherry pick
      Matrix Chain multiplication, LIS are their own categories
