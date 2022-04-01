@@ -1,4 +1,4 @@
-package aJan22.graph.maze;
+package aJan22.graph;
 
 
 import java.util.*;
