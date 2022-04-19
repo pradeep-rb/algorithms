@@ -56,3 +56,5 @@ back track
 System Design resources:
 https://github.com/donnemartin/system-design-primer
 https://github.com/binhnguyennus/awesome-scalability
+
+Dynamo DB - Key Value Store - Replication:   https://www.allthingsdistributed.com/2007/10/amazons_dynamo.html
