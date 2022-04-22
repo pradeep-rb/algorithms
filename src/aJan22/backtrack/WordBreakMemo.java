@@ -2,6 +2,7 @@ package aJan22.backtrack;
 
 import java.util.*;
 
+//140 word break 2
 public class WordBreakMemo {
 
     Map<String, List<String>> memo = new HashMap<>();
@@ -36,7 +37,7 @@ public class WordBreakMemo {
     public static void main(String[] args) {
         WordBreakMemo wb = new WordBreakMemo();
         wb.wordBreak("pineapplepenapple", Arrays.asList(new String[] {"apple","pen","applepen","pine","pineapple"})).stream().forEach(System.out::println);
-        wb.wordBreak("catsandog", Arrays.asList(new String[] {"cats","dog","sand","and","cat"})).stream().forEach(System.out::println);
+        wb.wordBreak("catsanddog", Arrays.asList(new String[] {"cats","dog","sand","and","cat"})).stream().forEach(System.out::println);
 
     }
 }

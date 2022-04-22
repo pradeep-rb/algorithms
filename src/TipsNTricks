@@ -32,7 +32,16 @@ sort an array:   Arrays.sort(arr, (a, b) -> a[1] - b[1]); args:  T[] generic arr
 Data Structures:
 Deque<Integer> stack/queue = new LinkedList<>() / ArrayDeque;
 
+Backtracking:
+ def backtrack(Path, Seletion List  ):
+     if meet the End Conditon:
+         result.add(Path)
+         return
 
+     for seletion in Seletion List:
+         select
+         backtrack(Path, Seletion List)
+         deselect
 
 Enums: (refer maze2, maze3)
 use constructor, values.
@@ -57,4 +66,6 @@ System Design resources:
 https://github.com/donnemartin/system-design-primer
 https://github.com/binhnguyennus/awesome-scalability
 
+Gossip: https://docs.datastax.com/en/cassandra-oss/2.1/cassandra/architecture/architectureGossipAbout_c.html
 Dynamo DB - Key Value Store - Replication:   https://www.allthingsdistributed.com/2007/10/amazons_dynamo.html
+                :  consistent hashing, vector clocks, tunable consistency, sloppy quorum,  hinted handoff, merkel tree
