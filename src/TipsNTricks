@@ -53,14 +53,20 @@ Big(0)
 * backtracking algos are usually O(n!)  - see burst balloons. Memoization can reduce the number of states.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------
-topics sorted by most commonly asked:
+Topics sorted by most commonly asked:
+------------------------------------
 dynamic programming
-greedy
-trees
-binary search
 graphs
+greedy *
+trees *
+binary search **
+Other DS: stack, heap
+two pointers *
+design *
+back track *
 div and conq
-back track
+sliding window *
+
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 System Design resources:
 https://github.com/donnemartin/system-design-primer

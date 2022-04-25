@@ -8,6 +8,7 @@ import java.util.stream.IntStream;
 /*
 
     lessons learnt:
+    * keeping a visited state to track selections
     * avoid copying arrays / creating additional memory
     * during backtracking, try to prune paths ahead of time
     * remember the deselect step in the following pseudo code:
@@ -15,6 +16,8 @@ import java.util.stream.IntStream;
             select
             backtrack(Path, Seletion List)
             deselect
+
+   Complexity:  o(k) k is the number of  beautiful arrangements
  */
 public class BeautifulArrangement {
 
