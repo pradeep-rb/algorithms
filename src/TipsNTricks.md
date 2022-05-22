@@ -1,4 +1,4 @@
-*When using custom DS like TreeNode or TrieNode, during the construction of the tree/trie
+* When using custom DS like TreeNode or TrieNode, during the construction of the tree/trie
  check to see if augmenting with things like no. of right or left childern, or index position etc. can help later with the solution.
 
 * fix for a mistake in div conq:  mid = (start + end) / 2
@@ -23,26 +23,27 @@ Graphs
     useful in detecting cycles during dfs
 
 Arrays
-To copy one array to another: System.ArrayCopy (src, srcPos, dest, destPos, Length)
-To initialize an array. Arrays.fill(arr, val)
-check array equivalence Arrays.equals
-to print arrays: Arrays.toString
+To copy one array to another: System.ArrayCopy (src, srcPos, dest, destPos, Length)\
+To initialize an array. Arrays.fill(arr, val)\
+check array equivalence Arrays.equals\
+to print arrays: Arrays.toString\
 sort an array:   Arrays.sort(arr, (a, b) -> a[1] - b[1]); args:  T[] generic array and comparator.
 
 Data Structures:
 Deque<Integer> stack/queue = new LinkedList<>() / ArrayDeque;
 
 Backtracking:
- def backtrack(Path, Seletion List  ):
-     if meet the End Conditon:
+```
+    def backtrack(Path, Seletion List  ):
+      if meet the End Conditon:
          result.add(Path)
          return
 
-     for seletion in Seletion List:
+    for seletion in Seletion List:
          select
          backtrack(Path, Seletion List)
          deselect
-
+```
 Enums: (refer maze2, maze3)
 use constructor, values.
 name() gives the enum literal
@@ -55,23 +56,23 @@ Big(0)
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 Topics sorted by most commonly asked:
 ------------------------------------
-dynamic programming
-graphs
-greedy *
-trees *
-binary search **
-Other DS: stack, heap
-two pointers *
-design *
-back track *
-div and conq
+dynamic programming\
+graphs\
+greedy *\
+trees *\
+binary search **\
+Other DS: stack, heap\
+two pointers *\
+design *\
+back track *\
+div and conq\
 sliding window *
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------
-System Design resources:
-https://github.com/donnemartin/system-design-primer
-https://github.com/binhnguyennus/awesome-scalability
+System Design resources:<br>
+[System design primer](https://github.com/donnemartin/system-design-primer)<br>
+[Awesome scalability](https://github.com/binhnguyennus/awesome-scalability)
 
-Gossip: https://docs.datastax.com/en/cassandra-oss/2.1/cassandra/architecture/architectureGossipAbout_c.html
-Dynamo DB - Key Value Store - Replication:   https://www.allthingsdistributed.com/2007/10/amazons_dynamo.html
+[Gossip Protocol/ Cassandra](https://docs.datastax.com/en/cassandra-oss/2.1/cassandra/architecture/architectureGossipAbout_c.html)<br>
+[Dynamo DB - Key Value Store - Replication]( https://www.allthingsdistributed.com/2007/10/amazons_dynamo.html)
                 :  consistent hashing, vector clocks, tunable consistency, sloppy quorum,  hinted handoff, merkel tree
