@@ -22,6 +22,11 @@ Graphs
 * its better to use a int visited[] array instead of a map. This is because int visited[] can be used to store more than 2 states - unvisited, visiting visited.
     useful in detecting cycles during dfs
 
+Maps
+* GetorDefualt\
+ Map<Integer, Integer> counter : counter.put(num, counter.getOrDefault(num, 0) + 1)
+   
+
 Arrays
 To copy one array to another: System.ArrayCopy (src, srcPos, dest, destPos, Length)\
 To initialize an array. Arrays.fill(arr, val)\
@@ -60,8 +65,8 @@ dynamic programming\
 graphs\
 greedy *\
 trees *\
-binary search **\
-Other DS: stack, heap\
+binary search *\
+Other DS: stack, heap, linkedlists \
 two pointers *\
 design *\
 back track *\
