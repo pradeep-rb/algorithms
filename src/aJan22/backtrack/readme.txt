@@ -37,9 +37,9 @@ Backtracking:
          return
 
     for seletion in Seletion List:
-         select
+         select (in to 'Path')
          backtrack(Path, Seletion List)
-         deselect
+         deselect (from 'Path')
 ```
 -------------------------------------------------------------------------------------------------------------------------
 Following backtrack with Memoization (top down DP)
