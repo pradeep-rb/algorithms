@@ -37,6 +37,10 @@ sort an array:   Arrays.sort(arr, (a, b) -> a[1] - b[1]); args:  T[] generic arr
 Data Structures:
 Deque<Integer> stack/queue = new LinkedList<>() / ArrayDeque;
 
+Bitwise:
+x = -4;  x >> 1 = -2  
+x =  4;  x >> 1 = 2 
+
 Backtracking:
 ```
     def backtrack(Path, Seletion List  ):
@@ -66,12 +70,13 @@ graphs\
 greedy *\
 trees *\
 binary search *\
-Other DS: stack, heap, linkedlists \
+stack *\
+Other DS: heap, linkedlists \
 two pointers *\
 design *\
-back track *\
+back track \
 div and conq\
-sliding window *
+sliding window 
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 System Design resources:<br>

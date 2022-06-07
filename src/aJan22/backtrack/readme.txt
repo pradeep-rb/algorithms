@@ -6,12 +6,11 @@ Todo:
   46 Permutation: try a more efficient solution
   47. Permutations II - refer notes
   90. Subsets II - refer notes
-  93. Restore IP Addresses
-  131. Palindrome Partitioning
   784. Letter Case Permutation
   320. Generalized Abbreviation
   31. Next Permutation
   2116. Check if a Parentheses String Can Be Valid
+  79 Word Search
   132. Palindrome Partitioning II
   1745. Palindrome Partitioning IV
 
@@ -23,6 +22,8 @@ Order to revisit the problems:
 22 Generate parantheses
 131. Palindrome Partitioning
 93 RestoreIPAddresses
+79 Word Search
+140 word break 2
 -------------------------------------------------------------------------------------------------------------------------
 ** the key in backtracking is you are presented with choosing multiple choice.
   if you make a selection and pass the partial answer to the recursion, be sure to undo that selection(backtrack),
