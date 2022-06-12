@@ -1,7 +1,7 @@
 package aJan22.dynamicprog;
 
 // 123
-
+// similar 309
 /*
      questions :   how do you calculate the dp in the first level  (k = 0)?
      ans: k = 1 to 2(inclusive)
@@ -24,10 +24,10 @@ public class Stock3 {
 
     public int maxProfit(int txns, int[] prices) {
         int[][] dp = new int[txns + 1][prices.length];
-        for (int k = 1; k <= txns; k++) {
+        for (int k = 1; k <= txns; k++) { // k starts at 1 because we need a place to store dp[k -1]
             for (int i = 1; i < prices.length; i++) {
-                int maxProfitAtPrevTxn = prices[i]  - prices[0];
-                for (int j = 1; j <= i; j++) {
+                int maxProfitAtPrevTxn = prices[i]  - prices[0]; // since j cannot be 0 in the below for loop
+                for (int j = 1; j <= i; j++) { // j cannot be 0. there fore start from j = 1
                     maxProfitAtPrevTxn = Math.max(maxProfitAtPrevTxn, dp[k - 1][j - 1]  + prices[i]  - prices[j]);
                 }
                 dp[k][i] = Math.max(dp[k][i - 1], maxProfitAtPrevTxn);
@@ -39,6 +39,24 @@ public class Stock3 {
 
 
 
+    // Another version
+
+    public int maxProfitx(int txns, int[] prices) {
+        int[][] dp = new int[txns + 1][prices.length];
+        for (int k = 1; k <= txns; k++) { // k starts at 1 because we need a place to store dp[k -1]
+            for (int i = 1; i < prices.length; i++) {
+                int maxProfitAtPrevTxn =  - prices[0]; //  *** NOTE THIS VALUE **
+                for (int j = 1; j <= i; j++) { // j cannot be 0. there fore start from j = 1
+                    maxProfitAtPrevTxn = Math.max(maxProfitAtPrevTxn, dp[k - 1][j - 1]    - prices[j]);
+                }
+                dp[k][i] = Math.max(dp[k][i - 1], prices[i]  + maxProfitAtPrevTxn);
+            }
+        }
+
+        return dp[txns][prices.length - 1];
+    }
+
+
     public int maxProfit2(int steps, int[] prices) {
         int[][] dp = new int[steps + 1][prices.length];
 
@@ -47,6 +65,24 @@ public class Stock3 {
             for (int i = 1; i < prices.length; i++) {
                 int min = prices[0];
                 for (int j = 1; j <= i; j++) {
+                    /*
+                        Notice how min is recalculated over and over for all values from
+                        j= 0 to i.
+                        example:   min = min (min, f(1))
+
+                        min = min (min, f(1)), min = min (min, f(2))
+
+                        min = min (min, f(1)), min = min (min, f(2)), min = min (min, f(3))
+
+                        and it is only dependent on value of variable j and not i.
+
+                        At j = i, all min calculations (min = min( min, f(j))) for (j = 0 to i-1)
+                        have already been done and encapsulated in the min variable in previous iterations on i.
+                        So its enough to compute min = min( min, f(j)) only once for j = i and not repeat it.
+                        This is done by removing the j loop and replacing j with i. Note: this will only work for
+                        functions like min or max, not for sum.
+
+                     */
                     min = Math.min(min, prices[j] - dp[k - 1][j - 1] );
                 }
                 dp[k][i] = Math.max(dp[k][i - 1], prices[i]  - min);
@@ -55,6 +91,11 @@ public class Stock3 {
 
         return dp[steps][prices.length - 1];
     }
+
+
+
+
+
 
     /*
         the elimination of the forj loop:

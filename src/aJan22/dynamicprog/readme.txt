@@ -1,4 +1,5 @@
 Todo:
+    714. Best Time to Buy and Sell Stock with Transaction Fee
     131. Palindrome Partitioning
     42h  trapping rain water
     1000h merge stones

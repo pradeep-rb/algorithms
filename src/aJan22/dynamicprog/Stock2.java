@@ -10,11 +10,13 @@ public class Stock2 {
         for (int i = 1; i < prices.length; i++) {
             if(prices[i] > min) {
                 dp[i] = dp[i - 1] +  prices[i] - min;
-                min = prices[i];
+                min = prices[i]; // this is becausse, we have used up the previous min.
+                // so the new min is the current price, which will be used in the next iteration.
             }
-            else {
+            else {  // prices[i] < min
                 dp[i] = dp[i - 1];
                 min = Math.min( min, prices[i]);
+                // min =  prices[i]  as prices[i] < min
             }
         }
 
