@@ -32,7 +32,8 @@ To copy one array to another: System.ArrayCopy (src, srcPos, dest, destPos, Leng
 To initialize an array. Arrays.fill(arr, val)\
 check array equivalence Arrays.equals\
 to print arrays: Arrays.toString\
-sort an array:   Arrays.sort(arr, (a, b) -> a[1] - b[1]); args:  T[] generic array and comparator.
+sort an array:   Arrays.sort(arr, (a, b) -> a[1] - b[1]); args:  T[] generic array and comparator.\
+print a 2d araray:         Arrays.stream(intervals).forEach(x -> System.out.println(" " + x[0] + "," + x[1] ));
 
 Data Structures:
 Deque<Integer> stack/queue = new LinkedList<>() / ArrayDeque;
