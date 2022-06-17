@@ -1,8 +1,7 @@
 package aJan22.dynamicprog;
 
 //1871
-//sliding window + dp.
-public class JumpGame4 {
+public class JumpGame7 {
 
 
     public boolean canReach0(String s, int minJump, int maxJump) {
@@ -37,7 +36,7 @@ public class JumpGame4 {
 
     public static void main(String[] args) {
 
-        JumpGame4 jg = new JumpGame4();
+        JumpGame7 jg = new JumpGame7();
 
         System.out.println(jg.canReach( "011010", 2, 3 ));
         System.out.println(jg.canReach( "01101110", 2, 3 ));

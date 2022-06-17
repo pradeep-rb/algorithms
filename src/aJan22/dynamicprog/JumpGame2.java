@@ -1,27 +1,22 @@
 package aJan22.dynamicprog;
 
+import java.util.Arrays;
+
 //45
 public class JumpGame2 {
 
     public int jump(int[] nums) {
-
-        if(nums.length <= 1) return 0;
         int[] dp = new int[nums.length];
-        int n = nums.length;
+        Arrays.fill(dp, Integer.MAX_VALUE);
 
         dp[0] = 0;
-
-        for (int i = 1; i < n ; i++) {
-            dp[i] = Integer.MAX_VALUE;
+        for (int i = 1; i < nums.length ; i++) {
             for (int j = 0; j < i; j++) {
-                dp[i] = Math.min(dp[i], j + nums[j] >= i ? dp[j] + 1 : Integer.MAX_VALUE);
+                if(j + nums[j] >= i ) dp[i] = Math.min(dp[i], dp[j] + 1);
             }
         }
-        return  dp[n-1];
+        return dp[nums.length - 1];
     }
-
-
-
 
 
     public static void main(String[] args) {

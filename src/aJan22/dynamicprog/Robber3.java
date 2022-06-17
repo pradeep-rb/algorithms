@@ -7,20 +7,22 @@ public class Robber3 {
 
 
     public int rob(TreeNode root) {
-       return robHelper(root)[1];
+        int[] toRobOrNot =  traverse(root);
+       return  Math.max( toRobOrNot[0], toRobOrNot[1] );
     }
 
-    public int[] robHelper(TreeNode root) {
+    public int[] traverse(TreeNode root) {
         if(root == null) return  new int[]{0, 0};
 
-        int[] dpL = robHelper(root.left);
-        int[] dpR =  robHelper(root.right);
+        int[] robOrNotL = traverse(root.left);
+        int[] robOrNotR =  traverse(root.right);
 
-        //if me and my grand childen add up to less than my children then rob my children.
-        if(  root.val + dpL[0] + dpR[0] <   dpL[1] + dpR[1])  return new int[] {dpL[1] + dpR[1],  dpL[1] + dpR[1] };
-        //if me and my grand children add up to more than my children then rob me and my grand children.
-        return  new int[] {dpL[1] + dpR[1], root.val  + dpL[0] + dpR[0] };
+        //rob root
+        int rob = root.val + robOrNotL[1]  + robOrNotR[1];
+        //not rob root : rob children or not rob children
+        int notRob =  Math.max(robOrNotL[0],  robOrNotL[1]) + Math.max(robOrNotR[0],  robOrNotR[1]);
 
+        return new int[]{rob, notRob};
     }
 
 

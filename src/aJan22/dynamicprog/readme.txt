@@ -1,3 +1,11 @@
+ESSENCE OF MAKING RECURRENCE RELAITONS
+*** WHAT DECISIONS DO I NEED TO BE MAKING WHEN I PERFORM TASK(I) ***
+** FIND A WAY TO MAKE TASK(I) A FUNCTION OF PREVIOUS DECISIONS :  I-1.. I-2 ETC..
+
+* if the return type is integer i.e maximize or minimize something, bottom DP is preferabble
+* if the return type calls for a list of strings / paths traversed in the decision tree -
+                            Top down / backtracking with memoization is preferred
+
 Todo:
     714. Best Time to Buy and Sell Stock with Transaction Fee
     131. Palindrome Partitioning
