@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 //210  topological sort by dfs
 /*
 The tricky part is cycle detection.  DFS alone requires only two states : not visited and visited
-Cycle detection needs a 3rd state : visiting.
+revise:  Cycle detection needs a 3rd state : visiting.  Use int[] visited instead of boolean[] visited
  */
 public class CourseSchedule2 {
 

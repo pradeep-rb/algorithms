@@ -15,6 +15,25 @@ Todo:
      Matrix Chain multiplication, LIS are their own categories
      Merge interval problems*
 
+---------------------------------------------------------------------------------------------------------------------------------------
+order of problems:
+-----------------------------------------------------------------------------------------------------------------------------------------
+stock 1 2 3.  stock 3 gives you an idea of using multi dimensional dp array
+robber 1, 2 3: gets you to think about multiple starting states
+               robber 3 presents a variation involving recursion and bottom up DP, in addition to using top down with memoization to solve it
+paint fence: gets you to really pay attention to how to compute the ans at step i from previous steps i -1, i- 2 etc..
+jump game  2, 7: further solidifies the concept of solving i from i-1 to 0 steps
+            7 : presents a variation using sliding window to compute the answer in one pass using a cumulative result: especially
+            handy when boolean logic is involved.
+            7 is also related to [523. Continuous Subarray Sum] for a the 'cumulative'ness
+DeleteAndEarn:  another variation where the input is decomposed in to something that lends itself better to bottom-up DP'
+                and Top down dp for that matter.
+Trapping Rain Water:  Another problem that gets decomposed in to a DP problem
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------
 
 Leetcode DP categories
 https://leetcode.com/discuss/general-discussion/458695/dynamic-programming-patterns
@@ -25,13 +44,8 @@ DP Blogs
 https://codeforces.com/blog/entry/67679
 https://codeforces.com/blog/entry/43256
 
+-----------------------------------------------------------------------------------------------------------------------------------------
 
-max sub array
-stocks
-robber3 (rob 1 and rob2)
-paint house2 (paint house1)
-paint fence :   TRICKY
-----------
 
 718:  Maximum length of repeated subarray
 Input: A = [1,2,3,2,1], B = [3,2,1,4,7]

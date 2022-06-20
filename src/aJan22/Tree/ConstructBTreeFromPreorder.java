@@ -3,6 +3,8 @@ package aJan22.Tree;
 import java.util.HashMap;
 import java.util.Map;
 
+//105
+// revise:  involved using a global variable that the recursion stack had access to
 public class ConstructBTreeFromPreorder {
 
     public class TreeNode {

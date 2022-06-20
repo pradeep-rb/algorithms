@@ -18,7 +18,37 @@ public class JumpGame7 {
         return  dp[s.length()-1];
     }
 
+    /*
 
+          revise:
+            1) dint quite catch that the sliding window started at the left of 0 and therefore grew from size 0 to max - min.
+                therefore no pre-processing necessary
+            2) wasted time figuring out where the iteration should start and end.
+                    it was just easier to put guarrds in place to prevent Array out of bounds errors. Code is simpler and less error prone
+             3) Missed to check DP[left] and DP[right] for this is the true reach-ability check. Not sufficient to just
+                                                                                 check of charAt(left) or charAt(right) == '0'
+
+     */
+
+    public boolean canReachSW(String s, int minJump, int maxJump) {
+
+        int lastIndex = s.length() - 1;
+        boolean dp[] = new boolean[lastIndex + 1];
+        dp[0] = true;
+
+        int left = minJump - maxJump;
+        int nz = 0;
+        for (int i = 0; i <= lastIndex - minJump ; i++) {
+            if(dp[i]) nz++;
+            if(nz > 0 ) dp[ i + minJump] = s.charAt(i + minJump) == '0';
+            if(left >= 0 && dp[left])  nz--;
+            left++;
+
+        }
+        return dp[lastIndex ];
+    }
+
+     //see prev attempt
     public boolean canReach(String s, int minJump, int maxJump) {
         boolean dp[] = new boolean[s.length()];
 

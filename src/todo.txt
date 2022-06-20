@@ -1,0 +1,49 @@
+------------------------------------------------------------
+Graph :
+210 CourseSchedule2
+------------------------------------------------------------
+Design :
+
+max stack
+hashmap and hashset
+------------------------------------------------------------
+DP
+ 2297. Jump Game VIII
+523. Continuous Subarray Sum -- MATH // related to jumpgame 7 in the thought process of maintaining  a cumulative result
+ // so that the solution can be a O(n)
+Course Schedule: revisit for greedy and DP
+------------------------------------------------------------
+Greedy
+
+134. Gas Station
+------------------------------------------------------------
+Solved
+
+1871. Jump Game VII   : took a while to solve, practice again
+174 dungeon
+42 Trapping Rain Water
+Course Schedule: revisit for greedy and DP
+------------------------------------------------------------
+Stack
+
+------------------------------------------------------------
+LinkedList
+
+19. Remove Nth Node From End of List
+25H. Reverse Nodes in k-Group
+1836 	Remove Duplicates From an Unsorted Linked List
+------------------------------------------------------------
+Two Pointer
+
+2 sum, 3 sum problems
+------------------------------------------------------------
+Misc
+632. Smallest Range Covering Elements from K Lists
+76. Minimum Window Substring
+727. Minimum Window Subsequence
+Median of two sored arrays
+------------------------------------------------------------
+Divide & Conquer
+
+274 Number of Ships in a Rectangle
+------------------------------------------------------------

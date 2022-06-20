@@ -5,9 +5,9 @@ import java.util.LinkedList;
 
 //1249
 /*
-    attempt 1: Storing characters in to the stack. But this would not have resulted in an O(n) solution as elements
+    revise: Storing characters in to the stack. But this would not have resulted in an O(n) solution as elements
     would have to be popped out and popped back in to the stack
-    *S olution is store store the indices of unwanted parantheses in the stack instead, that can be deleted later
+    *Solution is store store the indices of unwanted parantheses in the stack instead, that can be deleted later
     *A string builder is used as string is mutable and would have not resulted in an O(n) solution.
  */
 public class MinRemovalForValidParantheses {

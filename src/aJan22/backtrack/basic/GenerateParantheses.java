@@ -6,6 +6,7 @@ import java.util.List;
 
 /*
     22. Generate Parentheses
+
       This might not seem like a backtracking problem but it actually is.  The back tracking is actually quite subtle
       At every point in the decision tree, you got to decide if you need a  open ( |*OR*| close ) parentheses
       The  choice making / OR -> is where the backtracking comes in to picture.
@@ -14,6 +15,8 @@ import java.util.List;
 
       So the backtracking in this problem can be done in the following way:
        String newPath = path + ("("); and pass the new path to the recursion call
+
+       revise: note the implicit backtracking on the variable open:  open +  1 inside the backtrack method
 
  */
 public class GenerateParantheses {

@@ -25,7 +25,12 @@ Graphs
 Maps
 * GetorDefualt\
  Map<Integer, Integer> counter : counter.put(num, counter.getOrDefault(num, 0) + 1)
-   
+* Compute if Absent
+     map.computeIfAbsent( key , k -> new ArrayList<>()).add(value);
+Sets  
+TreeSet:  headSet (returns elements lesser), tailSet (returns elements greater) in O(n)
+                        For O(logn) implement a BST in case of integers.
+
 
 Arrays
 To copy one array to another: System.ArrayCopy (src, srcPos, dest, destPos, Length)\
@@ -87,3 +92,6 @@ System Design resources:<br>
 [Gossip Protocol/ Cassandra](https://docs.datastax.com/en/cassandra-oss/2.1/cassandra/architecture/architectureGossipAbout_c.html)<br>
 [Dynamo DB - Key Value Store - Replication]( https://www.allthingsdistributed.com/2007/10/amazons_dynamo.html)
                 :  consistent hashing, vector clocks, tunable consistency, sloppy quorum,  hinted handoff, merkel tree
+
+
+
