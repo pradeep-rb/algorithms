@@ -1,6 +1,12 @@
+
+*   div conq:  mid = (start + end) / 2 + 1;
+                          start = mid; end = mid - 1;
+
+
 ToDo
     218 The Skyline Problem
     274 Number of Ships in a Rectangle
+
 Closest pair of points
 Intution:  https://www.youtube.com/watch?v=frir6Sf7ft4&ab_channel=nptelhrd
 ------------------------------------------------------------------------------------------------------------------------

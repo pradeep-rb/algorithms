@@ -1,9 +1,12 @@
 * When using custom DS like TreeNode or TrieNode, during the construction of the tree/trie
  check to see if augmenting with things like no. of right or left childern, or index position etc. can help later with the solution.
 
-* fix for a mistake in div conq:  mid = (start + end) / 2
-
-
+* fix for a mistake in div conq:  mid = (start + end) / 2 + 1;
+                        start = mid; end = mid - 1;
+* binary search  
+    m =  (l + h) /2  + 1  
+    l = m,  h = m - 1  
+    
 Streams/Lamda
 
 * populating a map with lists for value :   someMap.computeIfAbsent(key, l -> new ArrayList<>()).add(value );
@@ -83,6 +86,9 @@ design *\
 back track \
 div and conq\
 sliding window 
+
+Advanced  
+MST, Uniton Find, Fenwick (BIT), Segment Tree
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 System Design resources:<br>

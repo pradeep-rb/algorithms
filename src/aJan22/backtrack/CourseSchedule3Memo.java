@@ -6,7 +6,7 @@ import java.util.Arrays;
 public class CourseSchedule3Memo {
 
     /*
-            backtracking with memoization (top down dp ?)  with a greedy element to it
+            backtracking with memoization (top down dp ?)
      */
 
 

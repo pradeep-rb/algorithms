@@ -1,6 +1,37 @@
 
-The below problem has a good explanation on what greedy method is:  Its all about finding out a greedy factor
+* The below problem has a good explanation on what greedy method is:  Its all about finding out a greedy factor
 and then maximizing or minimzing or optimizing for it locally.
+
+* Some greedy problems need to use a  PQ to get a the max or min value at every step.
+    for ex: Furthest Building reach, Course Scheduling
+--------------------------------------------------------------------------------------------
+PATTERN :  GREEDY PICK and  UNDO
+** The basic premise of this idea is that we make a decision based on our current knowledge.
+ However, as we go along, we gain more knowledge and sometimes wish to go back in time to undo/redo some of our past actions**
+
+Course Schedule III
+ In Greedy algorithms, the goal is to find a greedy factor(s) that the solution depends on and try to optimize for these factor(s) locally, hoping for a globally optimal solution.
+ There is not one but two such greedy factors in this problem: 1) Obviously the end date, as it is more profitable to finish off courses that end sooner.
+ 2) However, the duration is also a factor.
+  What if a course ends sooner but has a very long duration that picking this course comes at the cost of picking other course(s) one at time,
+  that may have a larger end duration and hence allow for picking additional courses.
+
+ Algorithm: Pattern: Greedy pick on factor 1 and greedy undo on factor 2.
+ The premise is select what you can now but as you gain additional info, go back and undo a previous selection.
+ Unlike backtracking we will not be examining all possible selections in the selection space but certain specific ones that optimize for a greedy factor.
+
+ lets proceed optimizing only for factor 1 and PICK courses by smaller end date.
+ At some point later, as we see new courses and gain more knowledge, we could UNDO a selection from earlier by
+  swapping out a course with a large duration for a course with a shorted duration  which could then provide room
+  for accommodating more courses.
+ Greedy problems that fit this pattern:
+
+
+253  Meeting Rooms 2
+1642 Furthest Building Reach
+630. Course Schedule III
+
+--------------------------------------------------------------------------------------------
 https://leetcode.com/problems/two-city-scheduling/solution/
 
 
@@ -14,6 +45,22 @@ Todo:
 
 630 Course Schedule 3.
 -----------------------
-This is a back tracking problem but has a greedy element to it. Sorting the courses by their lastDay, it can be inferred
-that it is profitable to pick  courses with smaller end days  in a greedy manner prior to courses with a larger end days
+This is a back tracking problem. The question is if this can be solved by a  greedy algorithm.
+
+
+134. Gas Station
+--------------------------------------------------------------------------------------------
+Goal is to find the starting station in o(n)
+
+why is there an answer if sum_gas >= sum_costs ? The excess gas after reaching a certain location is passed on to the next location.
+At some other stations there won't be a surplus but rather a deficit (assuming you had a reserve tank and spent the gas from this reserve tank.)
+Since the surplus is accumulated through every station, it could potentially offset any deficit(s) should they occur at later stations.
+If the sum off all surpluses is greater the sum of all deficits, there is guaranteed to be an answer.
+
+Intuition: Assume that first index that produces a surplus is the starting position. Use the surplus in the next station.
+If the surplus is used up / if there is a deficit, then assume a new start.
+ The next index that produces a surplus is the new starting position and so on..
+------------------------------------------------------------------------------------------------------------------------------------------
+
+
 

@@ -28,6 +28,7 @@ jump game  2, 7: further solidifies the concept of solving i from i-1 to 0 steps
             7 is also related to [523. Continuous Subarray Sum] for a the 'cumulative'ness
 DeleteAndEarn:  another variation where the input is decomposed in to something that lends itself better to bottom-up DP'
                 and Top down dp for that matter.
+                another variation: rearranging the input by say sorting, if the rearrangement makes sense
 Trapping Rain Water:  Another problem that gets decomposed in to a DP problem
 
 

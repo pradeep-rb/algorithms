@@ -11,6 +11,7 @@ import java.util.List;
 
     complexity : O(n)
     At every iteration of the binary search algorithm, the search space is reduced by 1/2
+    Therefore,  N + N/2 + N/4....   = 2N
 
 
     questions

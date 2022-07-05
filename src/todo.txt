@@ -1,6 +1,8 @@
+ToDo:
 ------------------------------------------------------------
 Graph :
 210 CourseSchedule2
+Advanced (Top Sort, Union Find, MST)
 ------------------------------------------------------------
 Design :
 
@@ -8,21 +10,24 @@ max stack
 hashmap and hashset
 ------------------------------------------------------------
 DP
- 2297. Jump Game VIII
-523. Continuous Subarray Sum -- MATH // related to jumpgame 7 in the thought process of maintaining  a cumulative result
- // so that the solution can be a O(n)
-Course Schedule: revisit for greedy and DP
+1235h. Maximum Profit in Job Scheduling
+1642. Furthest Building You Can Reach
+2297. Jump Game VIII
+1642 Course Schedule: revisit for greedy and DP
+
 ------------------------------------------------------------
 Greedy
 
-134. Gas Station
+630 Course Schedule 3.
+2202. Maximize the Topmost Element After K Moves
+
 ------------------------------------------------------------
 Solved
 
 1871. Jump Game VII   : took a while to solve, practice again
 174 dungeon
 42 Trapping Rain Water
-Course Schedule: revisit for greedy and DP
+1642 Course Schedule: revisit for greedy and DP
 ------------------------------------------------------------
 Stack
 
@@ -33,15 +38,35 @@ LinkedList
 25H. Reverse Nodes in k-Group
 1836 	Remove Duplicates From an Unsorted Linked List
 ------------------------------------------------------------
-Two Pointer
+Two Pointer / Sliding window
 
 2 sum, 3 sum problems
+76. Minimum Window Substring
+727. Minimum Window Subsequence
+------------------------------------------------------------
+Binary Search
+1235. Maximum Profit in Job Scheduling
+528. Random Pick with Weight
+162 find peak element
+------------------------------------------------------------
+PQ
+
+1235H. Maximum Profit in Job Scheduling
+
+
 ------------------------------------------------------------
 Misc
 632. Smallest Range Covering Elements from K Lists
-76. Minimum Window Substring
-727. Minimum Window Subsequence
+
 Median of two sored arrays
+523. Continuous Subarray Sum -- MATH // related to jumpgame 7 in the thought process of maintaining  a cumulative result
+ // so that the solution can be a O(n)
+315H. Count of Smaller Numbers After Self
+
+1338. Reduce Array Size to The Half
+1940. Longest Common Subsequence Between Sorted Arrays
+2196. Create Binary Tree From Descriptions
+
 ------------------------------------------------------------
 Divide & Conquer
 
