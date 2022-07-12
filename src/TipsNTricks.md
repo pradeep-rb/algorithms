@@ -6,6 +6,9 @@
 * binary search  
     m =  (l + h) /2  + 1  
     l = m,  h = m - 1  
+    variation :
+    l <= h    m =   (l + h) / 2, l = m+ 1, h = m - 1      
+
     
 Streams/Lamda
 
@@ -70,6 +73,7 @@ Enumerate through enum ({Enum}.values):  for (Direction dir: Arrays.asList(Direc
 
 Big(0)
 * backtracking algos are usually O(n!)  - see burst balloons. Memoization can reduce the number of states.
+* when calculating Big O, look for number of states. Example in TD DP, the memo variable can give you the number of states 
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 Topics sorted by most commonly asked:

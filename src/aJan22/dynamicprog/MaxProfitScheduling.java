@@ -9,7 +9,7 @@ import java.util.Map;
 
 public class MaxProfitScheduling {
 
-    Map<Integer, Integer> memo = new HashMap();
+    Map<String, Integer> memo = new HashMap();
 
     public int jobScheduling(int[] startTime, int[] endTime, int[] profit) {
 
@@ -23,19 +23,18 @@ public class MaxProfitScheduling {
         }
 
         Arrays.sort( schedule, (a, b) -> a[0] - b[0] );
-        //Arrays.stream(schedule).forEach( x -> System.out.println("" + x[0] ));
+
 
         return doSchedule(0, 0,  schedule);
     }
 
     private int doSchedule(int currJob, int prevJob, int[][] schedule) {
         if(currJob == schedule.length  ) return 0;
-        System.out.println("c: " + currJob);
 
-                //String key =   "" + currJob + ":"  + prevJob + ":" + profit;
+        String key =   currJob + ":"  + prevJob ;
         //System.out.println( "c: " + currJob + " p: " + prevJob + " profit: " + profit );
 
-        //if (!memo.containsKey(currJob)) {
+        if (!memo.containsKey(key)) {
             int skip =  doSchedule(currJob + 1, prevJob, schedule);
             int notSkip = 0;
             if(schedule[currJob][0] >= schedule[prevJob][1]) {
@@ -43,10 +42,9 @@ public class MaxProfitScheduling {
             }
             int result = Math.max(skip, notSkip);
 
-            return  result;
-            //memo.put(currJob, result);
-        /* }
-        return memo.get(currJob);*/
+            memo.put(key, result);
+         }
+        return memo.get(key);
     }
 
 

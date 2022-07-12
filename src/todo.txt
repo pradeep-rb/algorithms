@@ -10,20 +10,24 @@ max stack
 hashmap and hashset
 ------------------------------------------------------------
 DP
-1235h. Maximum Profit in Job Scheduling
+410 SplitArrayLSum Bottom up
+1231. Divide Chocolate
 1642. Furthest Building You Can Reach
 2297. Jump Game VIII
 1642 Course Schedule: revisit for greedy and DP
 
+
 ------------------------------------------------------------
 Greedy
 
+Gas Station
 630 Course Schedule 3.
 2202. Maximize the Topmost Element After K Moves
 
 ------------------------------------------------------------
 Solved
 
+124. BinaryTreeMaxPathSum
 1871. Jump Game VII   : took a while to solve, practice again
 174 dungeon
 42 Trapping Rain Water
@@ -45,9 +49,12 @@ Two Pointer / Sliding window
 727. Minimum Window Subsequence
 ------------------------------------------------------------
 Binary Search
-1235. Maximum Profit in Job Scheduling
+
+1231.Divide Chocolate
+Median of two sorted arrays
 528. Random Pick with Weight
 162 find peak element
+
 ------------------------------------------------------------
 PQ
 

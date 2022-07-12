@@ -5,6 +5,7 @@ ESSENCE OF MAKING RECURRENCE RELAITONS
 * if the return type is integer i.e maximize or minimize something, bottom DP is preferabble
 * if the return type calls for a list of strings / paths traversed in the decision tree -
                             Top down / backtracking with memoization is preferred
+*  look for number of states when calculating Big(0). check memo for the states
 
 Todo:
     714. Best Time to Buy and Sell Stock with Transaction Fee
