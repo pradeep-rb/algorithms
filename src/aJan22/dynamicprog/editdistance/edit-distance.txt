@@ -1,0 +1,23 @@
+https://www.youtube.com/watch?v=MiqoA-yF-0M&ab_channel=BackToBackSWE
+
+Intuition:
+
+Asked to find the min operation.
+various combinations of operations are possible. We gotta pick the minimum
+ are there decisions to make at ever step/operation ?  are there overlapping subroblems ?
+ yes on both accounts
+
+DP is obvious at this point.  TD or Bottom Up ?
+Bottom seem more in this case as this is less about decisions and more about
+interleaving/overlapping subproblems
+
+* 2D DP array
+* Key:  every cell would represent the 'edit distance' and not the number of operations needed
+
+
+
+word1[i] = word2[j]
+    d[i][j] = 1 +  min (d[i-1][j], d[i][j-1], d[i-1][j-1] -1)
+
+word1[i] != word2[j]
+   d[i][j] = 1 +  min (d[i-1][j], d[i][j-1], d[i-1][j-1])

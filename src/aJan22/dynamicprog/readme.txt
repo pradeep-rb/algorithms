@@ -6,6 +6,8 @@ ESSENCE OF MAKING RECURRENCE RELAITONS
 * if the return type calls for a list of strings / paths traversed in the decision tree -
                             Top down / backtracking with memoization is preferred
 *  look for number of states when calculating Big(0). check memo for the states
+* since one is trying to account for all possibilities at a step, you don't have to try to do any optimizations.
+  Always try to come up with the simplest recurrance relation without trying to optimize too much
 
 Todo:
     714. Best Time to Buy and Sell Stock with Transaction Fee
@@ -33,6 +35,12 @@ DeleteAndEarn:  another variation where the input is decomposed in to something 
 Trapping Rain Water:  Another problem that gets decomposed in to a DP problem
 
 
+
+
+TOP DOWN VS Bottom Up
+
+Top down is usually good / better for decision problems.
+Bottom up is usually good for interleaving sub problems.
 
 
 -----------------------------------------------------------------------------------------------------------------------------------------
@@ -184,5 +192,61 @@ if(arr[j] > arr[i])  dp[i] =  Math.max( dp[i], 1+dp[j])
 return max(dp)
 Same technique can be used for finding longest overlapping intervals(435)
 ------------------------------------------------------------------------------------------------------------------------------------------
+32H. Longest Valid Parentheses
+
+Pretty obvious that this is a dp problem. However the recurrance relation is not.
+brute force: all possible subset and check if the substring is valid. o(n^3) complexity
+Was thinking on the lines of top down :  Top down is usually good for decision problems. For interleaving subproblems, bottom up DP is better
+Started with a 2D dp. Found a pattern but its too difficult to implement.
+Next stop 1D DP. This would mean the solution is O(n)
+Check  i and i-1
+case 1:  if they are () then  DP[i] = DP[i-2] + 2;
+case 2:  if they are )) then
+            if   S[i - DP[i-1] - 1]  = '(' then
+
+            DP[i] = DP[i-1] + 2  + dp[i - DP[i-1] - 2]
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+2209H. Minimum White Tiles After Covering With Carpets
+
+dp[i][j] =  The  count of the white tiles left after, going through i tiles and covering
+them up with j carpets.
+
+** revise / learning:  complicated things by thinking of how covering tile i also covers tile i+1, i+2..
+and trying to form a recurrance relation taking that in to account, in the spirit of trying to optimize for the numnber of decisions
+Turns out that really doesn't matter.
+*** revise When doing DP, since one is trying to account for all possibilities at a step, you don't have to try to do any optimizations.
+Always try to come up with the simplest recurrance relation without trying to optimize too much
+
+skip =  dp[i-1][k-1] + floor[i] == 0?  1 : 0;
+cover = dp[i-1][k-1]
+dp[i][j] = Math.min ( skip, cover )
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+1553H. Minimum Number of Days to Eat N Oranges
+
+attempt 1:    1 +  Math.min ( minDays(n-1) ,   Math.min ( n % 3 == 0 ? minDays( n  / 3) : Integer.MAX,
+                                                             n % 2  == 0 ? minDays( n /2 ) : Integer.MAX)
+                             );
+
+               This would result in too many states. Its never profitable to eat 1 apple a day for more than 2 days at a time.
+               A greedy approach is needed.  We need to greedily either eat n % 2 or n % 3 apple at a time so that we can make the
+               number of remaining apples divisible by 2 or 3.
 
 
+attempt 2:  1 +  Math.min ( n % 3 == 0 ? minDays( n / 3) : n % 3  + minDays( n - n % 3)  ,
+                                 n % 2 == 0 ? minDays( n  / 2) : n % 2  + minDays( n - n % 2) );
+
+           same as:
+           1 +  Math.min ( n % 3 == 0 ? minDays( n  / 3) : n % 3  + minDays( n/3)  ,
+                                           n % 2 == 0 ? minDays( n  / 2) : n % 2  + minDays( n /2) );
+
+           same as:
+           1 +  Math.min ( n % 3  + minDays( n/3)  ,  n % 2  + minDays( n /2) )
+---------------------------------------------------------------------------------------------------------------------------------------------------
+935. Knight Dialer
+Besides the obvious recursion + memoization O(n^3), there is a  DP solution.
+Initially all cells have an equal score of 1. (n = 1)
+Consider all the other cells you could come from, to get to a particular cell. Calculate the new score as a sum of scores from
+these other cells (n = 2). Now iterate  until N.  O(n) solution.
+---------------------------------------------------------------------------------------------------------------------------------------------------

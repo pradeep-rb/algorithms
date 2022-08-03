@@ -1,6 +1,7 @@
 package aJan22.dynamicprog;
 
 //42 the DP aspect is in finding out the left and right maxes
+// 32. Longest Valid Parentheses has a somewhat similar DP solution
 
 public class RainWaterTrap {
 

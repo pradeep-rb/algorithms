@@ -15,6 +15,7 @@ DP
 1642. Furthest Building You Can Reach
 2297. Jump Game VIII
 1642 Course Schedule: revisit for greedy and DP
+2209H. Minimum White Tiles After Covering With Carpets
 
 
 ------------------------------------------------------------
@@ -33,7 +34,10 @@ Solved
 42 Trapping Rain Water
 1642 Course Schedule: revisit for greedy and DP
 ------------------------------------------------------------
-Stack
+Stack / Queue
+32. Longest Valid Parentheses
+739. Daily Temperatures
+
 
 ------------------------------------------------------------
 LinkedList
@@ -58,9 +62,14 @@ Median of two sorted arrays
 ------------------------------------------------------------
 PQ
 
+295. Find Median from Data Stream
 1235H. Maximum Profit in Job Scheduling
 
+------------------------------------------------------------
+Math / Puzzle
 
+60. Permutation Sequence
+31. Next Permutation
 ------------------------------------------------------------
 Misc
 632. Smallest Range Covering Elements from K Lists
@@ -73,6 +82,16 @@ Median of two sored arrays
 1338. Reduce Array Size to The Half
 1940. Longest Common Subsequence Between Sorted Arrays
 2196. Create Binary Tree From Descriptions
+659. Split Array into Consecutive Subsequences
+
+------ Insertion Sort
+295. Find Median from Data Stream
+------
+
+------------------------------------------------------------
+Trees
+
+428. Serialize and Deserialize N-ary Tree (needs to be stateless)
 
 ------------------------------------------------------------
 Divide & Conquer

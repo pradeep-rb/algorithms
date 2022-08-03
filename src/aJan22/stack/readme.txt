@@ -11,7 +11,7 @@ Pattern 1:
       Keep adding new elements to the stack
 
 Pattern 2:
-*  In string problems, think about using a stringbuilder and storing the indices of the string in the stack instead
+*  In string problems, think about using a string-builder and storing the indices of the string in the stack instead
    MinRemovalForValidParantheses is a good example of the above.
 
 

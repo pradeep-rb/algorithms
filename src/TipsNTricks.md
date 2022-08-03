@@ -32,22 +32,29 @@ Maps
 * GetorDefualt\
  Map<Integer, Integer> counter : counter.put(num, counter.getOrDefault(num, 0) + 1)
 * Compute if Absent
-     map.computeIfAbsent( key , k -> new ArrayList<>()).add(value);
+     map.computeIfAbsent( key , k -> new ArrayList<>()).add(value);   
+* TreeMaps:  find largest value, insert, delete values all in O(logn) time.     
+
 Sets  
-TreeSet:  headSet (returns elements lesser), tailSet (returns elements greater) in O(n)
+* TreeSet:  headSet (returns elements lesser), tailSet (returns elements greater) in O(n)
                         For O(logn) implement a BST in case of integers.
+                       
+DP   
+* Top down is usually good / better for decision problems.   
+* Bottom up is usually good for interleaving sub problems.    
 
 
-Arrays
-To copy one array to another: System.ArrayCopy (src, srcPos, dest, destPos, Length)\
-To initialize an array. Arrays.fill(arr, val)\
-check array equivalence Arrays.equals\
-to print arrays: Arrays.toString\
-sort an array:   Arrays.sort(arr, (a, b) -> a[1] - b[1]); args:  T[] generic array and comparator.\
-print a 2d araray:         Arrays.stream(intervals).forEach(x -> System.out.println(" " + x[0] + "," + x[1] ));
 
-Data Structures:
-Deque<Integer> stack/queue = new LinkedList<>() / ArrayDeque;
+Arrays   
+* To copy one array to another: System.ArrayCopy (src, srcPos, dest, destPos, Length)
+* To initialize an array. Arrays.fill(arr, val)   
+* Check array equivalence Arrays.equals   
+* To print arrays: Arrays.toString   
+* Sort an array:   Arrays.sort(arr, (a, b) -> a[1] - b[1]); args:  T[] generic array and comparator.   
+* Print a 2d araray:         Arrays.stream(intervals).forEach(x -> System.out.println(" " + x[0] + "," + x[1] ));
+
+Data Structures:   
+D*eque<Integer> stack/queue = new LinkedList<>() / ArrayDeque;
 
 Bitwise:
 x = -4;  x >> 1 = -2  
@@ -105,3 +112,5 @@ System Design resources:<br>
 
 
 
+Must Watch:   
+Tips right before an interview - https://www.youtube.com/watch?v=LQFsEwcCO1E&ab_channel=TechLead
