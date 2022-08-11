@@ -8,7 +8,7 @@ BS Pattern:
 
 * Furthest B Reach (1642),  Split array max sum (410):
     1) Guess the answer
-            Establish an upper and lower bound for the ansert
+            Establish an upper and lower bound for the answer
     2) need a function to check if the answer is a correct in reasonable time
             Whats the answer's relationship with other parameters for the problem
     3) BS for an answer on the answer space. The answer needs to be already sorted on some property

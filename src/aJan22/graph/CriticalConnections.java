@@ -4,12 +4,18 @@ import java.util.*;
 
 // Tarjan's Algorithm
 // 1192. Critical Connections in a Network
+/*
+   Tarjans Algorithm does the following for every node
+   *  assigns an id for every newly discovered node
+   *  maintains the id of a node reachable from the current node whose id happens to be the lowest among all nodes
+        reachable from the current node
+ */
 public class CriticalConnections {
     boolean visited[];
     List<List<Integer>> ans = new ArrayList<>();
     Map<Integer, List<Integer>> graph = new HashMap<>();
 
-    int nodeRank[];
+    int nodeRank[]; // maintains the id of the lowest ranked node reachable from the current node.
     int id = 0;
 
     private void exploreDfs( int curr, int parent) {

@@ -1,9 +1,10 @@
+Inorder    LNR
+Preorder   NLR
+Postorder  LRN
+
 
 ToDo:
 106. Construct Binary Tree from Inorder and Postorder Traversal
-
-
-
 
 366. Find Leaves of Binary Tree (and order then by 'leaf order')
 

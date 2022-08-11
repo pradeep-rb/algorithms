@@ -43,7 +43,12 @@ DP
 * Top down is usually good / better for decision problems.   
 * Bottom up is usually good for interleaving sub problems.    
 
+Tree  
+*  Inorder    LNR  
+*  Preorder   NLR   
+*  Postorder  LRN  
 
+[Bit-Masking - used in graph solution ](https://leetcode.com/problems/shortest-path-visiting-all-nodes/solution/)
 
 Arrays   
 * To copy one array to another: System.ArrayCopy (src, srcPos, dest, destPos, Length)

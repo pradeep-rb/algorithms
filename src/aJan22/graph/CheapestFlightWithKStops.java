@@ -8,22 +8,22 @@ import java.util.*;
 // Time complexity is O(E.K) since E can be put back in the Queue at most K times.
 public class CheapestFlightWithKStops {
 
-    public int findCheapestPrice(int n, int[][] flights, int src, int dst, int K) {
+    public int findCheapestPrice(int n, int[][] flights, int src, int dest, int K) {
         Map<Integer, List<Integer[]>> graph = new HashMap<>();
 
         for (int[] flight: flights) graph.computeIfAbsent(flight[0], l -> new ArrayList<>()).add(new Integer[]{flight[1], flight[2]} );
         int[] hopsBySrc = new int[101];
         Arrays.fill(hopsBySrc, Integer.MAX_VALUE);
 
-        //index 0 : distance from src, 1 : node,  2: stops
+        //index 0 : cost/dist from src, 1 : node,  2: stops
         Queue<Integer[]> queue = new PriorityQueue<>( (e1, e2) -> e1[0] - e2[0]);
-        //seed the queue with 0 distance from src, src and 0 number of stops
+        //seed the queue with 0 distance/price from src, src and 0 number of stops
         queue.add(new Integer[]{0, src, 0});
 
         while( !queue.isEmpty() ) {
 
             Integer[] currSrc = queue.poll();
-            if(currSrc[1] == dst) return  currSrc[0];
+            if(currSrc[1] == dest) return  currSrc[0];
             if(currSrc[2] > K) continue;
             if(currSrc[2] >  hopsBySrc[currSrc[1]]) continue;
             hopsBySrc[currSrc[1]] =  currSrc[2];

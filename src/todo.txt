@@ -1,6 +1,7 @@
 ToDo:
 ------------------------------------------------------------
 Graph :
+684 redundant connection
 210 CourseSchedule2
 Advanced (Top Sort, Union Find, MST)
 ------------------------------------------------------------

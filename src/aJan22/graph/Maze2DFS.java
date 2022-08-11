@@ -5,11 +5,11 @@ import java.util.Arrays;
 
 //505 Maze 2;
 /*
-    No  need to keep track of visited nodes. This is because we continue exploring in a certain direction until we hit a wall
+
     Time complexity for DFS:   O(m*n*max(m,n))
     Explanation: We'll need to traverse the entire maze in the worst case. Due to backtracking, at every node, we'll need to traverse a depth of max(m,n)
  */
-public class Maze2 {
+public class Maze2DFS {
 
     int r,c ;
     int dirs[][] = new int[][]{ {1,0},{0,1},{-1,0},{0,-1} };
@@ -39,6 +39,7 @@ public class Maze2 {
             }
             int[] nextNode = new int[] { next[0] - dir[0], next[1] - dir[1]} ;
 
+            // This line eliminates the need to maintain a visited array.
             if(distances[start[0]][start[1]]  + nextDist <  distances[nextNode[0]][nextNode[1]]) {
                 distances[nextNode[0]][nextNode[1]] = distances[start[0]][start[1]]  + nextDist;
                 dfs(maze, nextNode );
@@ -50,7 +51,7 @@ public class Maze2 {
 
 
     public static void main(String[] args) {
-        Maze2 m2  = new Maze2();
+        Maze2DFS m2  = new Maze2DFS();
         System.out.println(m2.shortestDistance(new int[][] { {0,0,1,0,0},{0,0,0,0,0},{0,0,0,1,0},{1,1,0,1,1},{0,0,0,0,0}}, new int[]{0,4}, new int[] {4,4} ));
         System.out.println(m2.shortestDistance(new int[][] { {0,0,1,0,0},{0,0,0,0,0},{0,0,0,1,0},{1,1,1,1,1},{0,0,0,0,0}}, new int[]{0,4}, new int[] {4,4} ));
         System.out.println(m2.shortestDistance(new int[][] { {0,0,1,0,0},{0,0,0,0,0},{0,0,0,1,0},{0,1,1,1,1},{0,0,0,0,0}}, new int[]{0,4}, new int[] {4,4} ));

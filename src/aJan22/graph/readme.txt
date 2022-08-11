@@ -1,3 +1,13 @@
+Last Minute practice:
+
+maze 2, cheapest flights : dijstra
+course schedule: topo sort, cycle detection
+eventual safe node: cycle detection
+reconstruct itinerary: topo with twist
+------------------------------------------------------------------------------------------------------------------------
+Bit Masking - https://leetcode.com/problems/shortest-path-visiting-all-nodes/solution/
+------------------------------------------------------------------------------------------------------------------------
+
 Todo:
     1345. Jump Game IV
     1306. Jump Game III
@@ -18,7 +28,7 @@ DFS: stack, BFS: queue, Dijkstra: Min Priority Queue
 
 
 Algos
-DFS, BFS, Dijkstra,  Topological sort
+DFS, BFS, Dijkstra,  Topological sort, Tarjans algo (for critical connection)
 
 Topological Sort:
 2 algorithms :  Kahn's and DFS based

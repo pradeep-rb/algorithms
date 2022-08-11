@@ -2,7 +2,7 @@ package aJan22.binarysearch;
 
 import java.util.ArrayList;
 import java.util.List;
-
+//973
 /*
     note: all points are distinct
     The trick is to have a target distance (mid)and look through he search space to find points that are closer to the
