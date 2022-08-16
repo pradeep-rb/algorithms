@@ -3,6 +3,7 @@ package aJan22.graph;
 import java.util.Arrays;
 /*
  not a leetcode problem
+ O(E + V)  only if you mark the visited edges maze[start[0]][start[1]] = 1;
  */
 public class MazeHasPath {
 
@@ -16,8 +17,6 @@ public class MazeHasPath {
         int r = maze.length;
         int c = maze[0].length;
 
-        boolean hasPath = false;
-
         if(Arrays.equals(start, dest)) return true;
         if(maze[start[0]][start[1]] == 1) return  false;
 
@@ -28,11 +27,11 @@ public class MazeHasPath {
 
             if(next[0] >= 0 && next[0] < r && next[1] >= 0 && next[1] < c  ) {
                 //visited
-                maze[start[0]][start[1]] = 1;
-                hasPath |= dfs(maze, next, dest);
+               maze[start[0]][start[1]] = 1;
+               if(dfs(maze, next, dest)) return true;
             }
         }
-        return  hasPath;
+        return  false;
     }
 
 
@@ -45,3 +44,10 @@ public class MazeHasPath {
         System.out.println(mhp.hasPath(new int[][] { {0,0,1,0,0},{0,0,1,0,0},{0,0,0,1,0},{0,1,1,1,1},{0,0,0,0,0}}, new int[]{0,0}, new int[] {4,4} ));
     }
 }
+/*
+true
+false
+true
+false
+true
+ */

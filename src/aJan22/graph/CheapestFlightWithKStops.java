@@ -5,37 +5,39 @@ package aJan22.graph;
 import java.util.*;
 
 //787. Cheapest Flights Within K Stops
-// Time complexity is O(E.K) since E can be put back in the Queue at most K times.
+// Time complexity is O(E.logV) or V^2logV
 public class CheapestFlightWithKStops {
 
     public int findCheapestPrice(int n, int[][] flights, int src, int dest, int K) {
         Map<Integer, List<Integer[]>> graph = new HashMap<>();
 
         for (int[] flight: flights) graph.computeIfAbsent(flight[0], l -> new ArrayList<>()).add(new Integer[]{flight[1], flight[2]} );
-        int[] hopsBySrc = new int[101];
-        Arrays.fill(hopsBySrc, Integer.MAX_VALUE);
+        int[] hopsFromSrc = new int[101];
+        Arrays.fill(hopsFromSrc, Integer.MAX_VALUE);
 
-        //index 0 : cost/dist from src, 1 : node,  2: stops
-        Queue<Integer[]> queue = new PriorityQueue<>( (e1, e2) -> e1[0] - e2[0]);
+
+        // 0 : cost/dist from src, 1 : node,  2: stops
+        PriorityQueue<Integer[]> queue = new PriorityQueue<>( (e1, e2) -> e1[0] - e2[0]);
         //seed the queue with 0 distance/price from src, src and 0 number of stops
         queue.add(new Integer[]{0, src, 0});
 
         while( !queue.isEmpty() ) {
 
-            Integer[] currSrc = queue.poll();
-            if(currSrc[1] == dest) return  currSrc[0];
-            if(currSrc[2] > K) continue;
-            if(currSrc[2] >  hopsBySrc[currSrc[1]]) continue;
-            hopsBySrc[currSrc[1]] =  currSrc[2];
-            //System.out.println(currSrc[1]);
-            List<Integer[]> neighbors = graph.get(currSrc[1]);
-            //get all the neighbors and put them in the priority queue
+            Integer[] curr = queue.poll();
+            if(curr[1] == dest) return  curr[0];
+            if(curr[2] > K) continue;
 
-            if(neighbors != null) {
-                for (Integer[] neighbor : neighbors) {
-                    queue.add(new Integer[]{currSrc[0] + neighbor[1], neighbor[0], currSrc[2] + 1});
-                }
+
+            //If I have visited this node already it means that it was the cheapest path.
+            //now only allow this path to the same node if it offers better steps.
+            //if not there is no reason to explore it.
+            if(curr[2] >  hopsFromSrc[curr[1]]) continue;
+            hopsFromSrc[curr[1]] =  curr[2];
+
+            for (Integer[] neighbor :  graph.getOrDefault(curr[1], new ArrayList<>())) {
+                queue.add(new Integer[]{curr[0] + neighbor[1], neighbor[0], curr[2] + 1});
             }
+
         }
 
         return -1;

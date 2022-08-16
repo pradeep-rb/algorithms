@@ -6,7 +6,11 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 //847
-// complexity = N comparisons for every state *  N * 2^N states  = O (N^2 * 2^N)
+/*
+    no of states (size of seen matrix) = N nodes * 2^N possibilities for mask
+   complexity = N comparisons for every state *  N * 2^N states  = O (N^2 * 2^N)
+
+ */
 public class ShortestPathVistingAllNodes {
 
     public int shortestPathLength(int[][] graph) {

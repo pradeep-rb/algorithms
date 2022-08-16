@@ -213,7 +213,7 @@ dp[i][j] =  The  count of the white tiles left after, going through i tiles and 
 them up with j carpets.
 
 ** revise / learning:  complicated things by thinking of how covering tile i also covers tile i+1, i+2..
-and trying to form a recurrance relation taking that in to account, in the spirit of trying to optimize for the numnber of decisions
+and trying to form a recurrance relation taking that in to account, in the spirit of trying to optimize for the number of decisions
 Turns out that really doesn't matter.
 *** revise When doing DP, since one is trying to account for all possibilities at a step, you don't have to try to do any optimizations.
 Always try to come up with the simplest recurrance relation without trying to optimize too much

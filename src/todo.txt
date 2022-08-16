@@ -6,7 +6,6 @@ Graph :
 Advanced (Top Sort, Union Find, MST)
 ------------------------------------------------------------
 Design :
-
 max stack
 hashmap and hashset
 ------------------------------------------------------------
@@ -18,15 +17,13 @@ DP
 1642 Course Schedule: revisit for greedy and DP
 2209H. Minimum White Tiles After Covering With Carpets
 
-
 ------------------------------------------------------------
 Greedy
 
 Gas Station
 630 Course Schedule 3.
 2202. Maximize the Topmost Element After K Moves
-
-------------------------------------------------------------
+-----------------------------------------------------------
 Solved
 
 124. BinaryTreeMaxPathSum
@@ -39,7 +36,6 @@ Stack / Queue
 32. Longest Valid Parentheses
 739. Daily Temperatures
 
-
 ------------------------------------------------------------
 LinkedList
 
@@ -49,6 +45,7 @@ LinkedList
 ------------------------------------------------------------
 Two Pointer / Sliding window
 
+239H. Sliding Window Maximum
 2 sum, 3 sum problems
 76. Minimum Window Substring
 727. Minimum Window Subsequence
@@ -62,10 +59,8 @@ Median of two sorted arrays
 
 ------------------------------------------------------------
 PQ
-
-295. Find Median from Data Stream
+632. Smallest Range Covering Elements from K Lists (good one)
 1235H. Maximum Profit in Job Scheduling
-
 ------------------------------------------------------------
 Math / Puzzle
 
@@ -73,7 +68,6 @@ Math / Puzzle
 31. Next Permutation
 ------------------------------------------------------------
 Misc
-632. Smallest Range Covering Elements from K Lists
 
 Median of two sored arrays
 523. Continuous Subarray Sum -- MATH // related to jumpgame 7 in the thought process of maintaining  a cumulative result
@@ -88,14 +82,22 @@ Median of two sored arrays
 ------ Insertion Sort
 295. Find Median from Data Stream
 ------
-
 ------------------------------------------------------------
 Trees
-
 428. Serialize and Deserialize N-ary Tree (needs to be stateless)
-
 ------------------------------------------------------------
 Divide & Conquer
 
 274 Number of Ships in a Rectangle
 ------------------------------------------------------------
+MISC /  Multiple Soln
+
+23. Merge k Sorted Lists
+
+1) comparing one element at a time and moving to new list.   k(comparisons) * N
+2) using a heap to pop out the min element.  logk * N
+3) Merging  2 lists at time.    k  * N  :   summation of the following, k times:     i * N/k (elements in node1)  + N/K (elements in node 2)
+4) Divide and conquer.  2 lists at a  time but like a tree with logk levels. (every list is merged in O(n) time
+  where  n is th total element in the 2 lists.  Therefore  N logk  (N = n + n.. k times)
+
+------------------------------------------------------------------------------------------------------------------------

@@ -1,6 +1,5 @@
-package aJan22.greedy;
+package aJan22.heap;
 
-import java.util.Deque;
 import java.util.PriorityQueue;
 
 
@@ -31,28 +30,6 @@ public class FurthestBuildingReach {
             if( bricks < 0) return i;
         }
 
-        return heights.length - 1;
-    }
-
-    public int  alternateSolution(int[] heights, int bricks, int ladders) {
-        PriorityQueue<Integer>  pq = new PriorityQueue<>(Integer::compare);
-
-        for (int i = 0; i < heights.length - 1; i++) {
-
-            int diff  = heights[i+1] - heights[i];
-            if( diff <= 0 )continue;
-
-            if(ladders == 0) {
-                //using a ladder here
-                pq.add(diff);
-                if( bricks - pq.peek() < 0 ) return i;
-                bricks -= pq.poll();
-            }
-            else {
-                pq.add(diff);
-                ladders--;
-            }
-        }
         return heights.length - 1;
     }
 

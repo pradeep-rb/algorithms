@@ -39,7 +39,7 @@ public class SplitArrayLSum {
 
 
     /*
-        revise :  complexity =  n * (n * m states) = o(n^2m)
+        revise :  complexity =  n * (n * m states) = o(n^2*m)
      */
     public int backtrack( int start, int spitsLeft, int[] prefixSum, Integer[][]  memo) {
         //String key =  start + ":" + spitsLeft;

@@ -10,11 +10,13 @@ import java.util.*;
     This is pretty much a variation of topological sort with a little twist in the lexical order.
 
     Although backtracking is one of the possible solutions, back tracking is not really necessary.
-    The problem has a gaurenteed result and the dfs algorithm will indeed discover the  optimal path.
+    The problem has a gauranteed result and the dfs algorithm will indeed discover the  optimal path.
 
     Note that in the tree parlance this is a postOrder traversal of the graph
-    Worst case complexity:  decided by sorting whose complexity depends on the graph structure
-    NlogN where N = E/2 (A star graph with one noe in the center)
+    Worst case complexity:
+     Decided by the sort function which dominates (as dfs is  o(V+ E)) and the sorting complexity depends on the graph structure
+     worst case when graph is a star structure:  NlogN where N = E/2 (A star graph with one no  in the center a pair of incoming,outgoing edges to each node)
+     avg case: when graph is less clustered (each node has equal incoming and outing (ring)).  N = E/2V.   Therefore ELog(E/V)
  */
 public class ReconstructItinerrary {
     // origin -> list of destinations
@@ -32,6 +34,7 @@ public class ReconstructItinerrary {
     private void dfs(String curr) {
         LinkedList<String> destList = graph.getOrDefault(curr, new LinkedList<>());
         while (!destList.isEmpty()) {
+            //we care about if an edge was already visite or not as opposed to a node.
             String dest = destList.pollFirst();
             dfs(dest);
         }

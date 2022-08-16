@@ -26,7 +26,8 @@ Graphs
 * Among dfs, bfs and dijkstra, dfs is probably the easiest to code, since the recursive call implicity keeps track of the state
    as opposed to using BFS, where the state has to be stored in a queue *
 * its better to use a int visited[] array instead of a map. This is because int visited[] can be used to store more than 2 states - unvisited, visiting visited.
-    useful in detecting cycles during dfs
+    useful in detecting cycles during dfs. If a node is currently 'visiting' / gray edge, a cycle exists. 
+*  To keep track if an edge was visited as apposed to a node. LinkedList destList;  destList.pollFirst(); 
 
 Maps
 * GetorDefualt\
@@ -104,7 +105,7 @@ div and conq\
 sliding window 
 
 Advanced  
-MST, Uniton Find, Fenwick (BIT), Segment Tree
+MST, UnionFind, Fenwick (BIT), Segment Tree
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 System Design resources:<br>

@@ -9,6 +9,8 @@ import java.util.*;
    *  assigns an id for every newly discovered node
    *  maintains the id of a node reachable from the current node whose id happens to be the lowest among all nodes
         reachable from the current node
+
+    O(V + E)
  */
 public class CriticalConnections {
     boolean visited[];
