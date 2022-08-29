@@ -19,7 +19,7 @@ public class FilingBookCases {
 
 
     //attempt 1
-    public int findMinHeightATEEMPT1(int curr, int maxHeight, int wRem) {
+    public int findMinHeightATTEMPT1(int curr, int maxHeight, int wRem) {
         String key = curr +  ":" + wRem;
         if(memo.containsKey(key)) return memo.get(key);
 
@@ -44,11 +44,12 @@ public class FilingBookCases {
 
         if(curr == books.length ) return maxHeight;
         int[] currBook = books[curr];
-
+                                                         //prev max height +    find new height
         memo.put( key, currBook[0] <= wRem ? Math.min(   maxHeight + findMinHeight(curr + 1, currBook[1], shefWidth - currBook[0]) , // new shelf
                   findMinHeight(curr + 1, Math.max(maxHeight, currBook[1]),wRem - currBook[0] )) // same shelf
-                : maxHeight + findMinHeight(curr + 1,  currBook[1], shefWidth - currBook[0])
-        ); // new shelf
+                //prev max height + find new height
+                : maxHeight + findMinHeight(curr + 1,  currBook[1], shefWidth - currBook[0]) // new shelf
+        );
 
         return memo.get(key);
     }

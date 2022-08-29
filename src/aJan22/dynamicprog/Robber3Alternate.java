@@ -4,6 +4,9 @@ import aJan22.ds.TreeNode;
 import java.util.HashMap;
 
 //337
+/*
+    top down approach ?
+ */
 public class Robber3Alternate {
 
     public int rob(TreeNode root) {

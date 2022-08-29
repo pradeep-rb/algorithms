@@ -10,6 +10,7 @@ max stack
 hashmap and hashset
 ------------------------------------------------------------
 DP
+241. Different Ways to Add Parentheses
 410 SplitArrayLSum Bottom up
 1231. Divide Chocolate
 1642. Furthest Building You Can Reach

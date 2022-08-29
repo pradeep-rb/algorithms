@@ -1,9 +1,6 @@
-package aJan22.graph;
-
-import jdk.nashorn.internal.runtime.arrays.ArrayIndex;
+package aJan22.graph.bitmask;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 //847
 /*

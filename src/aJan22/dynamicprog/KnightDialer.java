@@ -34,7 +34,7 @@ public class KnightDialer {
 
     public int knightDialer(int n) {
       dirs = new int[][]{{-1 , -2},  {1, -2}, {-2, -1}, {2, -1}, {-2, 1}, {2, 1}, {-1, 2}, {1, 2},};
-      pad =  new int[][] { {1, 2, 3}, {4, 5, 6}, {7, 8, 9}, {-1, 0, -1} };
+      pad =  new int[][] { {1, 1, 1}, {1, 1, 1}, {1, 1, 1}, {-1, 0, -1} };
 
       long moves = 0;
         for (int i = 0; i < pad.length; i++) { // r
@@ -51,6 +51,7 @@ public class KnightDialer {
 
         KnightDialer kd = new KnightDialer();
         System.out.println(kd.knightDialer(50));
+        //267287516
 
     }
 }

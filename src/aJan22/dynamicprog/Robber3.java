@@ -3,6 +3,9 @@ package aJan22.dynamicprog;
 import aJan22.ds.TreeNode;
 
 //337
+/*
+    this is a bottom up approach
+ */
 public class Robber3 {
 
 

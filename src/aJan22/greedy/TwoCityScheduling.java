@@ -5,6 +5,7 @@ import java.util.Arrays;
 
 //1029
 // requirement: half candidates in first city and half candidates in other city
+
 public class TwoCityScheduling {
 
 

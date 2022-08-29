@@ -2,6 +2,15 @@
 * The below problem has a good explanation on what greedy method is:  Its all about finding out a greedy factor
 and then maximizing or minimzing or optimizing for it locally.
 
+Example: 1029 Two city Scheduling:
+
+    * Figure out how to sort the input.
+    * parse the sorted input
+In this problem, sort by the difference of the cost to send person i to city A or B in Asc order
+This is the money gained or lost which is what we are aiming to optimize.
+
+
+
 * Some greedy problems need to use a  PQ to get a the max or min value at every step.
     for ex: Furthest Building reach, Course Scheduling
 --------------------------------------------------------------------------------------------

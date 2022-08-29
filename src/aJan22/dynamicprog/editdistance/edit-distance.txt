@@ -1,5 +1,6 @@
 https://www.youtube.com/watch?v=MiqoA-yF-0M&ab_channel=BackToBackSWE
 
+//72
 Intuition:
 
 Asked to find the min operation.

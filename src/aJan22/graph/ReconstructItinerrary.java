@@ -3,7 +3,11 @@ package aJan22.graph;
 import java.util.*;
 
 //332
+
 /*
+    The premise of this algorithm is that if you cannot explore at all, then thats the node you should visit
+    last
+
     revise:  note the line  String dest = destList.pollFirst(). In this problem we care about if an edge was already visited
     or not as opposed to a node.
     This line: graph.forEach( (k, v) -> Collections.sort(v)) takes care of the lexical order
@@ -34,7 +38,7 @@ public class ReconstructItinerrary {
     private void dfs(String curr) {
         LinkedList<String> destList = graph.getOrDefault(curr, new LinkedList<>());
         while (!destList.isEmpty()) {
-            //we care about if an edge was already visite or not as opposed to a node.
+            //we care about if an edge was already visited or not as opposed to a node.
             String dest = destList.pollFirst();
             dfs(dest);
         }

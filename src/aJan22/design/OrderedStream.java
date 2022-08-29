@@ -6,6 +6,9 @@ import java.util.Map;
 import java.util.TreeMap;
 
 //1656
+/*
+    just use arrays instead.
+ */
 public class OrderedStream {
 
     int ptr = 1;

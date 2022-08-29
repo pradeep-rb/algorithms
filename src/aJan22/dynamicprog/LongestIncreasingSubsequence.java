@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 /*
     300. Longest Increasing Subsequence
+    refer to count teams  (1395)
  */
 public class LongestIncreasingSubsequence {
 

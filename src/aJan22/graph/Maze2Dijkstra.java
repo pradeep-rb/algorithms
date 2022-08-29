@@ -6,6 +6,13 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 
 //505 Maze 2
+/*
+    Time complexity of Dijstra :   ( V + E) Log V
+    total number of vertices in the worst case = m * n
+    therefore  TC =  O( mn * log (mn) )
+
+
+ */
 public class Maze2Dijkstra {
 
     public int shortestDistance(int[][] maze, int[] start, int[] destination) {

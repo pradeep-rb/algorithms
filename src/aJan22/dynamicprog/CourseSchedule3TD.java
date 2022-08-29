@@ -21,8 +21,11 @@ public class CourseSchedule3TD {
         Pair<Integer, Integer> key = new Pair<>(i, totDuration);
         if(!memo.containsKey(key)) {
             memo.put(key, curr[0] + totDuration <= curr[1] ?
+                    //take a course
                     Math.max(1 + backtrack(courses, i + 1, curr[0] + totDuration),
+                            //don't take a course
                             backtrack(courses, i + 1, totDuration)) :
+                    //cant take that course
                     backtrack(courses, i + 1, totDuration)
             );
         }

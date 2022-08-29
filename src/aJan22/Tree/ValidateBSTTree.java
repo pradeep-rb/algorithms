@@ -1,7 +1,7 @@
 package aJan22.Tree;
 
 import aJan22.ds.TreeNode;
-
+//98
 public class ValidateBSTTree {
 
     boolean isValidBST(TreeNode root) {

@@ -9,6 +9,8 @@
     variation :
     l <= h    m =   (l + h) / 2, l = m+ 1, h = m - 1      
 
+*  Matrix  
+    r < 0 || r >= grid.length || c < 0 || c >= grid[0].length 
     
 Streams/Lamda
 
@@ -27,7 +29,8 @@ Graphs
    as opposed to using BFS, where the state has to be stored in a queue *
 * its better to use a int visited[] array instead of a map. This is because int visited[] can be used to store more than 2 states - unvisited, visiting visited.
     useful in detecting cycles during dfs. If a node is currently 'visiting' / gray edge, a cycle exists. 
-*  To keep track if an edge was visited as apposed to a node. LinkedList destList;  destList.pollFirst(); 
+*  To keep track if an edge was visited as apposed to a node. LinkedList destList;  destList.pollFirst();  
+* lambda for iterating through a map:  ex: graph.forEach( (k,v) -> Collections.sort(v));  
 
 Maps
 * GetorDefualt\

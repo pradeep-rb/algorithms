@@ -10,6 +10,8 @@ import java.util.Map;
     435. Non-overlapping Intervals using bottom up DP
     calculate the maximum non-overlapping intervals (similar to maximum increasing subsequence)
     subtract that from the total number of intervals.
+
+    min overlapping intervals  =  total - max non-overlapping intervals
  */
 public class NonOverLappingIntervalsDP {
 

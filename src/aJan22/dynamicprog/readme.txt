@@ -22,9 +22,13 @@ Todo:
 order of problems:
 -----------------------------------------------------------------------------------------------------------------------------------------
 stock 1 2 3.  stock 3 gives you an idea of using multi dimensional dp array
-robber 1, 2 3: gets you to think about multiple starting states
+robber 1 (198), 2 (213) 3: gets you to think about multiple starting states
                robber 3 presents a variation involving recursion and bottom up DP, in addition to using top down with memoization to solve it
 paint fence: gets you to really pay attention to how to compute the ans at step i from previous steps i -1, i- 2 etc..
+Robber3 (337):  Not the two different ways to solve this problem. One is a bottom up approach. Other is a top down approach.
+                The intuition behind each of these approaches will come in handy when solving problems that can only be solved one way or the other
+                Ex: Validating a Binary tree. Can be validated both ways. Top down is more popular(98). But in this problem (333), bottom is the only option.
+
 jump game  2, 7: further solidifies the concept of solving i from i-1 to 0 steps
             7 : presents a variation using sliding window to compute the answer in one pass using a cumulative result: especially
             handy when boolean logic is involved.
@@ -33,7 +37,7 @@ DeleteAndEarn:  another variation where the input is decomposed in to something 
                 and Top down dp for that matter.
                 another variation: rearranging the input by say sorting, if the rearrangement makes sense
 Trapping Rain Water:  Another problem that gets decomposed in to a DP problem
-
+ShortestPathSuperString:   state transitions using bit mask / Traveling salesman problem
 
 
 

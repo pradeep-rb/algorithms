@@ -5,6 +5,7 @@ import java.util.List;
 
 //1472
 // better than leetcode solution
+//ArrayList was the choice to be able to do add at location.
 class BrowserHistory {
 
     ArrayList<String>  history = new ArrayList<>();

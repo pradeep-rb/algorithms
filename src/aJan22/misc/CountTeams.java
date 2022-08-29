@@ -4,6 +4,7 @@ import java.util.TreeSet;
 
 //1395
 public class CountTeams {
+    // refer to the the 2 DP solutions
 
     /*
         Intuition:  On first glance this looks like a backtracking solution due to the increasing / decreasing subsequence.
@@ -11,6 +12,9 @@ public class CountTeams {
         1) the number of elements is only 3 in the subsequence, so there might be a clever technique that could might be more efficient
         2) the ask is to return the number of subsequences. there is no need to actually backtrack and find / count all the subsequences/
         // surely there is an mathematical way to get the count instead of exploring all possible subsequences and counting them
+
+        intuition: for every number i between 1 to n-1, we are trying to find the number of possible triplets that can be formed
+        with i as the middle element.
 
         for every element between 1 to n-1,   count the no of elements less to the left and greater to the right
          ans += less to left * greater to the right
