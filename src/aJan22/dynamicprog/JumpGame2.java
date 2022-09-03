@@ -3,6 +3,7 @@ package aJan22.dynamicprog;
 import java.util.Arrays;
 
 //45
+//refer the greedy solution tha has a better time complexity.
 public class JumpGame2 {
 
     public int jump(int[] nums) {

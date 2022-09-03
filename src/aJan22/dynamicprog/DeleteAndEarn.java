@@ -9,31 +9,45 @@ import java.util.*;
     revise : this involved the decomposition of the  original input array in to something that would lend itself to the
     DP model of iterating over the input set and interleaving partial results
 
+    * Its easy to figure out that a map is needed to keep track of  total score for a given number
+    * In a bottom up dp, one  usually  iterates over an input array or the dp array and fills the
+    dp array using a recurrance relation.
+    * recurrance relation is not super obvious as nums is not sorted and values are pretty random / non contiguous.
+    * we need to pay attention to that fact that choosing nums[i] affects what happens to nums[i] + 1 and nums[i] - 1
+    * its clear that we need to iterate not over, the nums array itself but from 0 to max-val in the nums array
+        - some values between 0 and max-val might be missing but thats ok
+    *   recurrance relation is dp[i]  =  max( gain(i) + dp[i-2] ,  dp[i-1])
+
  */
 public class DeleteAndEarn {
 
+    // This is a bottom up solution
+    /*
+        Fits the patter of dp[i]  =  max( gain(i) + dp[i-2] ,  dp[i-1])
+
+     */
     public int deleteAndEarn(int[] nums) {
 
-        Map<Integer, Integer> points = new TreeMap<>();
+        // nums is not necessarily sorted
+        // how ever,  we seem to care about nums[i] - 1 and nums[i] + 1 ( nums next to each other)
+        // therefore we iterate over 0 to maxnum towards the end.
 
+        Map<Integer, Integer> points = new HashMap<>();
+
+        int maxNum = 0;
         for (int num: nums) {
             points.put(num, points.getOrDefault(num, 0) + num  );
+            maxNum = Math.max(num, maxNum);
         }
-        List<Integer> pointsList = new ArrayList<>(points.keySet());
 
-        int oneBackSc = points.get(pointsList.get(0));
-        int twoBackSc = 0;
-        int score =  points.get(pointsList.get(0));
-        for (int i = 1; i <  pointsList.size(); i++) {
-            int num = pointsList.get(i);
-            int prevNum = pointsList.get(i-1);
-            score =   num - prevNum == 1 ?  Math.max(oneBackSc, twoBackSc + points.get(num))
-                                                     :      points.get(num) + oneBackSc;
+        int dp[] = new int[maxNum + 1];
+        dp[1] = points.getOrDefault(1, 0 );
 
-            twoBackSc = oneBackSc;
-            oneBackSc = score;
+        for (int i = 2; i <= maxNum; i++) {
+            dp[i] =   Math.max( points.getOrDefault(i, 0) + dp[i-2], dp[i-1]);
         }
-        return score;
+
+        return dp[maxNum];
     }
 
 

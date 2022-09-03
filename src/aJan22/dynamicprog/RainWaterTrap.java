@@ -2,6 +2,17 @@ package aJan22.dynamicprog;
 
 //42 the DP aspect is in finding out the left and right maxes
 // 32. Longest Valid Parentheses has a somewhat similar DP solution
+/*
+
+   Best example of a solution that is derived from an earlier  brute force solution.
+   Brute force. For every point scan left and right to get the left max and right max.
+   This takes n^2 comparisons. Can they be memoized ?
+
+   Enter DP to reduce the number of comparisons.
+   Scan from left to right. At every point, find the biggest number from the current point (inclusive) to the
+   beginning of the array (dp[i-1])
+   Vice versa for the right max.
+ */
 
 public class RainWaterTrap {
 

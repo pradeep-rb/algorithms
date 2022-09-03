@@ -8,8 +8,11 @@ Advanced (Top Sort, Union Find, MST)
 Design :
 max stack
 hashmap and hashset
+1026 skiplist
 ------------------------------------------------------------
 DP
+Palindrome :  730,  940, 115
+
 241. Different Ways to Add Parentheses
 410 SplitArrayLSum Bottom up
 1231. Divide Chocolate

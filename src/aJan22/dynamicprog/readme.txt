@@ -24,7 +24,8 @@ order of problems:
 stock 1 2 3.  stock 3 gives you an idea of using multi dimensional dp array
 robber 1 (198), 2 (213) 3: gets you to think about multiple starting states
                robber 3 presents a variation involving recursion and bottom up DP, in addition to using top down with memoization to solve it
-paint fence: gets you to really pay attention to how to compute the ans at step i from previous steps i -1, i- 2 etc..
+Paint fence, 91 Decode Ways, Climbing stairs:
+                     gets you to really pay attention to how to compute the ans at step i from previous steps i -1, i- 2 etc..
 Robber3 (337):  Not the two different ways to solve this problem. One is a bottom up approach. Other is a top down approach.
                 The intuition behind each of these approaches will come in handy when solving problems that can only be solved one way or the other
                 Ex: Validating a Binary tree. Can be validated both ways. Top down is more popular(98). But in this problem (333), bottom is the only option.

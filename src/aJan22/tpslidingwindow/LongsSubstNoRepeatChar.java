@@ -1,9 +1,7 @@
-package aJan22.slidingwindow;
+package aJan22.tpslidingwindow;
 
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
-import java.util.Set;
 
 //3
 // a good problem to show speed vs memory trade-offs

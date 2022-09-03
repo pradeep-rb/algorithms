@@ -11,6 +11,7 @@ import java.util.PriorityQueue;
     If a new interval can be swapped for an old one, the pq size stays the same (old removed and new added)
     else add a new entry there by increasing the PQ size(which holds the count for the number of rooms needed)
  */
+// similar : 52 merge intervals, 1094, 452, 2251
 public class MeetingRooms2 {
 
     public int minMeetingRooms(int[][] intervals) {

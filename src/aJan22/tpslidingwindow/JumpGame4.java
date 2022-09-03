@@ -1,4 +1,4 @@
-package aJan22.slidingwindow;
+package aJan22.tpslidingwindow;
 
 //1871
 //sliding window + dp.

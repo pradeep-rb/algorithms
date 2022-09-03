@@ -21,7 +21,7 @@ Streams/Lamda
 * toArray: result.stream().mapToInt(i -> i).toArray()
 * PQ: comparator example:         Queue<MazeState> graph = new PriorityQueue<>(Comparator.comparing(MazeState::getDistance).thenComparing(MazeState::getDirection) );
 * Comparator :Comparator.comparing() - natural order , thenComparing,  reversed() - reversed natural order
-
+* multi level sort: Arrays.sort(pairs, (a, b) ->  a[1] == b[1] ? a[0] - b[0] :  a[1] - b[1]);  
 
 Graphs
 * dfs uses stack. BFS - Queue,  Dijkstra uses P Queue.

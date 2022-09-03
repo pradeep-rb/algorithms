@@ -1,4 +1,4 @@
-package aJan22.slidingwindow;
+package aJan22.tpslidingwindow;
 
 //1004
 public class MaxConsecutiveOnes3 {

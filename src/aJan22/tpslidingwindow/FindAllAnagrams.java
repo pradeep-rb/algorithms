@@ -1,4 +1,4 @@
-package aJan22.slidingwindow;
+package aJan22.tpslidingwindow;
 
 import java.util.ArrayList;
 import java.util.HashMap;
